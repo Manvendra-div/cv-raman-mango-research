@@ -1,0 +1,27 @@
+{
+  "dashboard": "research_dashboard",
+  "status": "implemented",
+  "framework": "streamlit",
+  "default_url": "http://127.0.0.1:8502",
+  "main_script": "src/research_dashboard/dashboard.py",
+  "run_script": "research_dashboard/run_dashboard.ps1",
+  "views": [
+    "Overview",
+    "Data Explorer",
+    "Model Performance",
+    "Explainability",
+    "Validation",
+    "Decision Support",
+    "Artifacts"
+  ],
+  "uses_champion_models": true,
+  "requires_fastapi_dss_server": false,
+  "primary_inputs": [
+    "data/processed/feature_table.csv",
+    "data/processed/selected_features.json",
+    "outputs/metrics/",
+    "outputs/explainability/phase8_xai/",
+    "outputs/validation/phase10/",
+    "outputs/models/"
+  ]
+}

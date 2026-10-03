@@ -1,0 +1,109 @@
+Target,Output_Explained,Sample_ID,Split,Village,Actual_Value,Predicted_Value,Explained_Output_Value,Rank,Feature_Condition,LIME_Contribution,Abs_LIME_Contribution,Class_Of_Interest
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,1,Soil_Health_Index > 0.68,0.7467379633536894,0.7467379633536894,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,2,Nutrient_Balance_Ratio > 0.67,0.6582627920859415,0.6582627920859415,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,3,Total_Nitrogen > 0.75,0.406824627670062,0.406824627670062,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,4,Available_K > 0.97,0.406048385238797,0.406048385238797,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,5,Available_P > 0.85,0.3742572684326656,0.3742572684326656,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,6,Microbial_Richness_Score > 0.63,0.3251641157425245,0.3251641157425245,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,7,Shannon_Index > 0.71,0.208710359568157,0.208710359568157,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,8,Pielou_Evenness > 1.00,0.16792614620590043,0.16792614620590043,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,9,Simpson_Index > 0.91,0.13786124664796717,0.13786124664796717,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,10,NPK_Balance_Score_Phase6 > 0.45,-0.12741441745265816,0.12741441745265816,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,11,0.00 < Village_Mall <= 1.00,0.10297703739671413,0.10297703739671413,
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,12,Mycorrhizae_AMF <= -0.80,0.0844625165229975,0.0844625165229975,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,1,Nutrient_Balance_Ratio <= -0.58,-0.7050179429119328,0.7050179429119328,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,2,Soil_Health_Index <= -0.63,-0.7014669263478478,0.7014669263478478,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,3,Available_K <= -0.97,-0.43505200599654575,0.43505200599654575,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,4,Available_P <= -0.69,-0.39663088950278,0.39663088950278,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,5,Total_Nitrogen <= -0.98,-0.3643005998041494,0.3643005998041494,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,6,Microbial_Richness_Score <= -0.65,-0.309596301612218,0.309596301612218,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,7,Pielou_Evenness <= -1.02,-0.17841209521332557,0.17841209521332557,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,8,NPK_Balance_Score_Phase6 <= -0.65,0.12918730003188508,0.12918730003188508,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,9,Village_Kakori <= 0.00,0.07782107827351968,0.07782107827351968,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,10,Mycorrhizae_AMF > 0.94,-0.07287264908225764,0.07287264908225764,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,11,0.00 < Management_Organic <= 1.00,0.06464240510206827,0.06464240510206827,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,12,-0.83 < Shannon_Index <= -0.12,-0.06206558872521167,0.06206558872521167,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,1,Soil_Health_Index > 0.68,0.7572498485246276,0.7572498485246276,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,2,Nutrient_Balance_Ratio > 0.67,0.6870654123369403,0.6870654123369403,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,3,Total_Nitrogen > 0.75,0.39390807250756,0.39390807250756,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,4,Available_K > 0.97,0.37927477983786306,0.37927477983786306,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,5,Available_P > 0.85,0.3676389063448195,0.3676389063448195,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,6,Microbial_Richness_Score > 0.63,0.33032816081492333,0.33032816081492333,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,7,Shannon_Index > 0.71,0.1896247466815751,0.1896247466815751,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,8,Pielou_Evenness > 1.00,0.1883714323471848,0.1883714323471848,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,9,Simpson_Index > 0.91,0.14609489046271082,0.14609489046271082,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,10,NPK_Balance_Score_Phase6 > 0.45,-0.1046360844777005,0.1046360844777005,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,11,Organic_Carbon > 0.72,0.09977144741935258,0.09977144741935258,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,12,Village_Mall <= 0.00,-0.06778059835309978,0.06778059835309978,
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,1,Pathogen_Load_Index > 0.56,0.5043566374776132,0.5043566374776132,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,2,Soil_Health_Index <= -0.63,0.052124783753750764,0.052124783753750764,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,3,Tree_Age > 0.98,0.021962723742901438,0.021962723742901438,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,4,Mango_Variety_Dashehari <= 0.00,-0.019373406028059665,0.019373406028059665,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,5,-0.02 < Pathogen_Load_Index_Phase6 <= 0.89,0.01634682723494521,0.01634682723494521,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,6,EC <= -0.90,0.015127922505883564,0.015127922505883564,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,7,Mn <= -0.79,0.014724538653305438,0.014724538653305438,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,8,-0.74 < Soil_Physical_Condition_Score_Phase6 <= 0.05,-0.014391917490378318,0.014391917490378318,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,9,Pseudomonas_PGPR > 0.77,0.013527169976126454,0.013527169976126454,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,10,Management_Integrated <= 0.00,0.013103649615789798,0.013103649615789798,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,11,Beneficial_Microbial_Index_Phase6 > 0.83,0.012932323082178152,0.012932323082178152,High
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,12,Micronutrient_Balance_Score_Phase6 <= -0.60,0.012854461132074143,0.012854461132074143,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,1,Pathogen_Load_Index > 0.56,0.4981099199218894,0.4981099199218894,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,2,0.11 < Pielou_Evenness <= 1.00,-0.017567506230372457,0.017567506230372457,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,3,-0.60 < Diversity_Score_Phase6 <= 0.02,-0.01498776044838928,0.01498776044838928,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,4,EC > 0.98,-0.01425233846048886,0.01425233846048886,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,5,-0.12 < Mn <= 0.74,-0.014055287251865967,0.014055287251865967,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,6,Tree_Age <= -0.47,0.012136811520615763,0.012136811520615763,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,7,-0.15 < Soil_Health_Index <= 0.68,-0.01198886107061908,0.01198886107061908,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,8,Soil_Depth_15-30 <= 0.00,-0.011753618217652388,0.011753618217652388,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,9,Sampling_Season_Winter <= 0.00,-0.01118594313905702,0.01118594313905702,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,10,Soil_Physical_Condition_Score_Phase6 <= -0.74,0.010578498961805646,0.010578498961805646,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,11,Microbial_Richness_Score > 0.63,-0.010282444359133893,0.010282444359133893,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,12,Village_Mall <= 0.00,-0.009647181215482572,0.009647181215482572,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,1,Pathogen_Load_Index > 0.56,0.5393484418877289,0.5393484418877289,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,2,Soil_Health_Index <= -0.63,0.0535013933242964,0.0535013933242964,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,3,0.18 < Trichoderma <= 0.96,-0.023041298519506797,0.023041298519506797,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,4,-0.12 < Shannon_Index <= 0.71,0.017048483161506,0.017048483161506,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,5,Total_Nitrogen <= -0.98,-0.016136409707580915,0.016136409707580915,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,6,-0.58 < Richness_Evenness_Balance_Phase6 <= 0.12,-0.015594374109526752,0.015594374109526752,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,7,Mn > 0.74,-0.015052656968581284,0.015052656968581284,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,8,Euryarchaeota <= -0.56,-0.012225865986328863,0.012225865986328863,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,9,Tree_Age <= -0.47,0.011201207195139678,0.011201207195139678,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,10,Available_K <= -0.97,0.011039370021073129,0.011039370021073129,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,11,Management_Organic <= 0.00,0.010809861308041159,0.010809861308041159,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,12,Village_Mall <= 0.00,0.010711806759440596,0.010711806759440596,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,1,Nutrient_Balance_Ratio > 0.67,0.48625876590971756,0.48625876590971756,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,2,Soil_Health_Index > 0.68,0.0925016697282179,0.0925016697282179,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,3,NPK_Balance_Score_Phase6 > 0.45,0.055176458254586405,0.055176458254586405,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,4,Microbial_Richness_Score > 0.63,-0.025480257862131067,0.025480257862131067,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,5,Available_K > 0.97,0.024634606684177992,0.024634606684177992,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,6,-0.79 < Mn <= -0.12,-0.017594494390650972,0.017594494390650972,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,7,Mango_Variety_Langra <= 0.00,0.016136530683938832,0.016136530683938832,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,8,Trichoderma > 0.96,0.015418484128879207,0.015418484128879207,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,9,Village_Malihabad <= 0.00,-0.014745142346922846,0.014745142346922846,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,10,Pathogen_Load_Index > 0.56,0.013617037191849207,0.013617037191849207,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,11,Total_Nitrogen > 0.75,0.013468440002039866,0.013468440002039866,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,12,-0.69 < Available_P <= 0.17,-0.012326817851660407,0.012326817851660407,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,1,-0.58 < Nutrient_Balance_Ratio <= -0.02,-0.4741930452247841,0.4741930452247841,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,2,-0.15 < Soil_Health_Index <= 0.68,0.03824356558712936,0.03824356558712936,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,3,-0.47 < Tree_Age <= 0.09,0.023283206282438625,0.023283206282438625,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,4,Mango_Variety_Safeda <= 0.00,0.021503905747211616,0.021503905747211616,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,5,-0.03 < Simpson_Index <= 0.91,-0.020220181113153757,0.020220181113153757,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,6,Mn <= -0.79,0.019031655756186722,0.019031655756186722,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,7,-0.78 < Pathogen_Load_Index <= -0.16,0.018125818077795536,0.018125818077795536,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,8,Soil_Health_Index_Phase6 <= -0.73,-0.018095378658132405,0.018095378658132405,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,9,Management_Conventional <= 0.00,-0.016614895803831055,0.016614895803831055,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,10,EC > 0.98,0.016134077520109456,0.016134077520109456,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,11,0.17 < Available_P <= 0.85,0.01306426958915881,0.01306426958915881,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,12,-0.06 < Mycorrhizae_AMF <= 0.94,0.012107981348524864,0.012107981348524864,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,1,Nutrient_Balance_Ratio > 0.67,0.4894600442008831,0.4894600442008831,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,2,Soil_Health_Index > 0.68,0.08697336543957973,0.08697336543957973,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,3,NPK_Balance_Score_Phase6 > 0.45,0.06544561828789874,0.06544561828789874,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,4,-0.83 < Pathogen_Load_Index_Phase6 <= -0.02,-0.03213056035220577,0.03213056035220577,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,5,Available_P > 0.85,0.030543956001797812,0.030543956001797812,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,6,-0.10 < Microbial_Richness_Score <= 0.63,-0.019030533341108897,0.019030533341108897,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,7,-0.04 < Available_K <= 0.97,0.016578795679951432,0.016578795679951432,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,8,Total_Nitrogen > 0.75,0.015770074926639975,0.015770074926639975,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,9,Village_Kakori <= 0.00,-0.013892394023801529,0.013892394023801529,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,10,Shannon_Index <= -0.83,0.012746862177635264,0.012746862177635264,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,11,-0.26 < Pathogen_Beneficial_Ratio_Phase6 <= 0.13,-0.012429314078827185,0.012429314078827185,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,12,Soil_Depth_0-15 <= 0.00,0.01215585698904727,0.01215585698904727,High

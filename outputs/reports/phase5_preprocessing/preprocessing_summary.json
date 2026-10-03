@@ -1,0 +1,64 @@
+{
+  "cleaning_report": {
+    "raw_rows": 20000,
+    "raw_columns": 63,
+    "duplicate_rows_before": 0,
+    "missing_values_before": {},
+    "missing_values_after": {},
+    "negative_taxa_values_before": {
+      "Bacteroidetes": 15,
+      "Zygomycota": 3717
+    },
+    "negative_taxa_values_after": {},
+    "unique_sample_ids": 20000,
+    "unique_orchard_ids": 50,
+    "clean_rows": 20000,
+    "clean_columns": 65
+  },
+  "split_counts": {
+    "train": 10458,
+    "validation": 2241,
+    "test": 2242,
+    "holdout_rahimabad": 5059
+  },
+  "split_membership_rows": 20000,
+  "disease_risk_counts": {
+    "Medium": 9512,
+    "Low": 6901,
+    "High": 3587
+  },
+  "nutrient_availability_counts": {
+    "High": 10247,
+    "Optimal": 9753
+  },
+  "model_ready_summary": {
+    "split_shapes": {
+      "train": {
+        "rows": 10458,
+        "encoded_feature_columns": 68
+      },
+      "validation": {
+        "rows": 2241,
+        "encoded_feature_columns": 68
+      },
+      "test": {
+        "rows": 2242,
+        "encoded_feature_columns": 68
+      },
+      "holdout_rahimabad": {
+        "rows": 5059,
+        "encoded_feature_columns": 68
+      }
+    },
+    "encoded_feature_count": 68,
+    "numeric_feature_count": 53,
+    "categorical_feature_count": 5
+  },
+  "outputs": {
+    "clean_master_dataset": "data/processed/clean_master_dataset.csv",
+    "data_dictionary": "data/processed/data_dictionary.csv",
+    "model_ready_all_features": "data/processed/model_ready_all_features.csv",
+    "model_ready_all_targets": "data/processed/model_ready_all_targets.csv",
+    "split_membership": "data/splits/split_membership.csv"
+  }
+}

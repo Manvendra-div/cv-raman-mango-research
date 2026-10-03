@@ -1,0 +1,2 @@
+Validation_Level,Status,Input_File,Template_File,Rows,Notes
+Real-Sample Validation,Pending real orchard samples,data\validation\real_sample_validation_input.csv,data\validation\real_sample_validation_template.csv,0,"Populate the input file with measured real-sample features and observed targets, then rerun Phase 10."

@@ -1,0 +1,271 @@
+{
+  "sample_id": "DSS-example",
+  "predictions": {
+    "Mango_Yield": {
+      "value": 19.903935631803698,
+      "unit": "kg_per_tree",
+      "model": "Linear_Regression"
+    },
+    "Disease_Risk": {
+      "model": "Gradient_Boosting",
+      "class": "Medium",
+      "probabilities": {
+        "High": 0.00020604293390395453,
+        "Low": 0.0003198758375259863,
+        "Medium": 0.99947408122857
+      },
+      "confidence": 0.99947408122857
+    },
+    "Nutrient_Availability": {
+      "model": "Random_Forest",
+      "class": "High",
+      "probabilities": {
+        "High": 0.9443564918895165,
+        "Optimal": 0.05564350811048349
+      },
+      "confidence": 0.9443564918895165
+    }
+  },
+  "explanations": {
+    "Mango_Yield": [
+      {
+        "rank": 1,
+        "feature": "Soil_Health_Index",
+        "input_value": 69.45602707410683,
+        "importance": 0.3889970769030906,
+        "mean_shap": -0.048051340443919,
+        "diagnostic_thresholds": "Q25=62.95, median=68.48, Q75=74.12",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 2,
+        "feature": "Nutrient_Balance_Ratio",
+        "input_value": 0.663636990236137,
+        "importance": 0.3367901528715654,
+        "mean_shap": -0.0432315430347991,
+        "diagnostic_thresholds": "median=0.6636",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 3,
+        "feature": "Total_Nitrogen",
+        "input_value": 272.8507922469995,
+        "importance": 0.2024803260502664,
+        "mean_shap": 0.0253827898778355,
+        "diagnostic_thresholds": "median=272.9",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 4,
+        "feature": "Available_P",
+        "input_value": 19.091218734548217,
+        "importance": 0.200298189255216,
+        "mean_shap": -0.0480347935379846,
+        "diagnostic_thresholds": "median=19.09",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 5,
+        "feature": "Available_K",
+        "input_value": 235.11221389467403,
+        "importance": 0.1968547558306824,
+        "mean_shap": -0.0156972507392179,
+        "diagnostic_thresholds": "median=235.1",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 6,
+        "feature": "Microbial_Richness_Score",
+        "input_value": 74.12752268380834,
+        "importance": 0.1616472497122382,
+        "mean_shap": -0.0048365386763998,
+        "diagnostic_thresholds": "Q25=66.45, median=73.92, Q75=80.8",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 7,
+        "feature": "Shannon_Index",
+        "input_value": 4.248569996933206,
+        "importance": 0.1111719896411346,
+        "mean_shap": 0.0009314739156593,
+        "diagnostic_thresholds": "median=4.249",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 8,
+        "feature": "Pielou_Evenness",
+        "input_value": 0.7237590926303276,
+        "importance": 0.0949564153999544,
+        "mean_shap": -0.009453448064603,
+        "diagnostic_thresholds": "median=0.7238",
+        "interpretation": "contextual"
+      }
+    ],
+    "Disease_Risk": [
+      {
+        "rank": 1,
+        "feature": "Pathogen_Load_Index",
+        "input_value": 0.49257784965918205,
+        "importance": 0.2318758939872117,
+        "mean_shap": 0.0550896247659225,
+        "diagnostic_thresholds": "Q25=0.2332, median=0.486, Q75=0.7259",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 2,
+        "feature": "Soil_Health_Index",
+        "input_value": 69.45602707410683,
+        "importance": 0.0264894204009458,
+        "mean_shap": 0.0122532854806707,
+        "diagnostic_thresholds": "median=69.46",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 3,
+        "feature": "Nutrient_Balance_Ratio",
+        "input_value": 0.663636990236137,
+        "importance": 0.0006523662694335,
+        "mean_shap": 1.6342373667485978e-05,
+        "diagnostic_thresholds": "median=0.6636",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 4,
+        "feature": "Shannon_Index",
+        "input_value": 4.248569996933206,
+        "importance": 0.0003430758267005,
+        "mean_shap": 3.172457557555405e-05,
+        "diagnostic_thresholds": "median=4.249",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 5,
+        "feature": "Trichoderma",
+        "input_value": 49789.66124388685,
+        "importance": 0.0001930108171391,
+        "mean_shap": -9.671466283631587e-05,
+        "diagnostic_thresholds": "median=4.979e+04",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 6,
+        "feature": "NPK_Balance_Score_Phase6",
+        "input_value": 33.66847063990062,
+        "importance": 0.0001744539431215,
+        "mean_shap": 3.345897912977678e-05,
+        "diagnostic_thresholds": "median=33.67",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 7,
+        "feature": "Biocontrol_Index_Phase6",
+        "input_value": 82.12787094202818,
+        "importance": 0.0001451153259854,
+        "mean_shap": 4.337768612403459e-05,
+        "diagnostic_thresholds": "median=82.13",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 8,
+        "feature": "Simpson_Index",
+        "input_value": 0.7926624725224729,
+        "importance": 0.0001269325661509,
+        "mean_shap": 2.9781307645891843e-05,
+        "diagnostic_thresholds": "median=0.7927",
+        "interpretation": "contextual"
+      }
+    ],
+    "Nutrient_Availability": [
+      {
+        "rank": 1,
+        "feature": "Nutrient_Balance_Ratio",
+        "input_value": 0.663636990236137,
+        "importance": 0.368561721118371,
+        "mean_shap": -0.0192577082384751,
+        "diagnostic_thresholds": "median=0.6636",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 2,
+        "feature": "Soil_Health_Index",
+        "input_value": 69.45602707410683,
+        "importance": 0.0563905126603396,
+        "mean_shap": -0.0021894719146972,
+        "diagnostic_thresholds": "median=69.46",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 3,
+        "feature": "NPK_Balance_Score_Phase6",
+        "input_value": 33.66847063990062,
+        "importance": 0.0319397410258816,
+        "mean_shap": -0.0029459317054543,
+        "diagnostic_thresholds": "Q25=24.5, median=31.55, Q75=43.73",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 4,
+        "feature": "Available_P",
+        "input_value": 19.091218734548217,
+        "importance": 0.0148747375738274,
+        "mean_shap": -0.0027907221213581,
+        "diagnostic_thresholds": "Q25=12.89, median=18.38, Q75=23.34",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 5,
+        "feature": "Available_K",
+        "input_value": 235.11221389467403,
+        "importance": 0.0121470041741013,
+        "mean_shap": -0.0007206329963405,
+        "diagnostic_thresholds": "Q25=177.3, median=230.2, Q75=288.2",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 6,
+        "feature": "Total_Nitrogen",
+        "input_value": 272.8507922469995,
+        "importance": 0.0114968142815789,
+        "mean_shap": 0.0021021401413402,
+        "diagnostic_thresholds": "Q25=212.9, median=272.5, Q75=338.2",
+        "interpretation": "higher values increase the explained output in Phase 8 dependence diagnostics"
+      },
+      {
+        "rank": 7,
+        "feature": "Microbial_Richness_Score",
+        "input_value": 74.12752268380834,
+        "importance": 0.0109204188406638,
+        "mean_shap": -0.00030378801361,
+        "diagnostic_thresholds": "median=74.13",
+        "interpretation": "contextual"
+      },
+      {
+        "rank": 8,
+        "feature": "Shannon_Index",
+        "input_value": 4.248569996933206,
+        "importance": 0.0028378489498679,
+        "mean_shap": -9.599765621260256e-05,
+        "diagnostic_thresholds": "median=4.249",
+        "interpretation": "contextual"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "rule_id": "NO_RULE_TRIGGERED",
+      "target": "Overall",
+      "feature": "",
+      "feature_value": null,
+      "condition": "No Phase 8 rule threshold triggered",
+      "recommendation": "Maintain monitoring and validate predictions with current soil tests and orchard observations.",
+      "xai_support": "No high-priority threshold rule fired for this input."
+    }
+  ],
+  "reference_artifacts": {
+    "phase8_report": "outputs\\reports\\phase8_explainable_ai\\phase8_explainable_ai_report.md",
+    "global_importance": "outputs\\explainability\\phase8_xai\\tables\\phase8_global_feature_importance.csv",
+    "dependence_thresholds": "outputs\\explainability\\phase8_xai\\tables\\phase8_shap_dependence_thresholds.csv",
+    "recommendation_rules": "outputs\\explainability\\phase8_xai\\tables\\phase8_recommendation_rules.csv"
+  },
+  "caveat": "Synthetic prototype model output. Validate with field observations before agronomic action."
+}

@@ -1,0 +1,25 @@
+{
+  "phase": "7.3",
+  "status": "complete",
+  "source_metrics": {
+    "regression": "outputs\\metrics\\regression\\regression_model_metrics.csv",
+    "classification": "outputs\\metrics\\classification\\classification_model_metrics.csv"
+  },
+  "champions": {
+    "Mango_Yield": "Linear_Regression",
+    "Disease_Risk": "Gradient_Boosting",
+    "Nutrient_Availability": "Random_Forest"
+  },
+  "rahimabad_rows": 5059,
+  "reported_claims_total": 14,
+  "reported_claims_matched": 2,
+  "reported_claims_near": 8,
+  "reported_claims_different": 4,
+  "outputs": {
+    "champion_summary": "outputs\\metrics\\phase7_model_results\\phase7_champion_summary.csv",
+    "reported_vs_reproduced": "outputs\\metrics\\phase7_model_results\\phase7_reported_vs_reproduced.csv",
+    "rahimabad_summary": "outputs\\metrics\\phase7_model_results\\phase7_rahimabad_holdout_summary.csv",
+    "artifact_manifest": "outputs\\metrics\\phase7_model_results\\phase7_model_artifact_manifest.csv",
+    "report": "outputs\\reports\\phase7_model_results\\phase7_complete_model_results_report.md"
+  }
+}

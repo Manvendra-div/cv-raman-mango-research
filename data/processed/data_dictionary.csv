@@ -1,0 +1,66 @@
+column,group,role,unit,description,preprocessing_note
+Sample_ID,sample_site_metadata,identifier_or_metadata,not_applicable,Unique sample identifier.,
+Orchard_ID,sample_site_metadata,identifier_or_metadata,not_applicable,Synthetic or field orchard identifier.,
+Village,sample_site_metadata,feature,not_applicable,Village or study-site label.,Categorical values stripped and encoded in model-ready outputs.
+Latitude,sample_site_metadata,feature,degrees_north,Latitude variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Longitude,sample_site_metadata,feature,degrees_east,Longitude variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Mango_Variety,sample_site_metadata,feature,not_applicable,Mango_Variety variable from integrated dataset.,Categorical values stripped and encoded in model-ready outputs.
+Tree_Age,sample_site_metadata,feature,years,Tree_Age variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Soil_Depth,sample_site_metadata,feature,not_applicable,Soil_Depth variable from integrated dataset.,Standardized to ASCII labels such as 0-15 and 15-30.
+Sampling_Season,sample_site_metadata,feature,not_applicable,Sampling_Season variable from integrated dataset.,Categorical values stripped and encoded in model-ready outputs.
+Management,sample_site_metadata,feature,not_applicable,Management variable from integrated dataset.,Categorical values stripped and encoded in model-ready outputs.
+pH,soil_physicochemical,feature,not_applicable,pH variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+EC,soil_physicochemical,feature,dS_per_m,EC variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Organic_Carbon,soil_physicochemical,feature,percent,Organic_Carbon variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Total_Nitrogen,soil_physicochemical,feature,kg_per_ha,Total_Nitrogen variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Available_P,soil_physicochemical,feature,kg_per_ha,Available_P variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Available_K,soil_physicochemical,feature,kg_per_ha,Available_K variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Soil_Moisture,soil_physicochemical,feature,percent,Soil_Moisture variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Soil_Temperature,soil_physicochemical,feature,deg_C,Soil_Temperature variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Bulk_Density,soil_physicochemical,feature,g_per_cm3,Bulk_Density variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+CEC,soil_physicochemical,feature,cmol_per_kg,CEC variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Sand,soil_physicochemical,feature,percent,Sand variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Silt,soil_physicochemical,feature,percent,Silt variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Clay,soil_physicochemical,feature,percent,Clay variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Zn,soil_physicochemical,feature,ppm,Zn variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Fe,soil_physicochemical,feature,ppm,Fe variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Mn,soil_physicochemical,feature,ppm,Mn variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Cu,soil_physicochemical,feature,ppm,Cu variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+C_N_Ratio,soil_physicochemical,feature,not_applicable,C_N_Ratio variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Air_Temp_Avg,climate_weather,feature,deg_C,Air_Temp_Avg variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Rainfall,climate_weather,feature,mm,Rainfall variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Humidity,climate_weather,feature,percent,Humidity variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Solar_Radiation,climate_weather,feature,MJ_per_m2_day,Solar_Radiation variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+OTU_Count,microbiome_diversity,feature,not_applicable,OTU_Count variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Shannon_Index,microbiome_diversity,feature,not_applicable,Shannon_Index variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Simpson_Index,microbiome_diversity,feature,not_applicable,Simpson_Index variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Chao1_Richness,microbiome_diversity,feature,not_applicable,Chao1_Richness variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Pielou_Evenness,microbiome_diversity,feature,not_applicable,Pielou_Evenness variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Proteobacteria,taxonomic_relative_abundance,feature,percent_relative_abundance,Proteobacteria variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Actinobacteria,taxonomic_relative_abundance,feature,percent_relative_abundance,Actinobacteria variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Acidobacteria,taxonomic_relative_abundance,feature,percent_relative_abundance,Acidobacteria variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Firmicutes,taxonomic_relative_abundance,feature,percent_relative_abundance,Firmicutes variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Bacteroidetes,taxonomic_relative_abundance,feature,percent_relative_abundance,Bacteroidetes variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Ascomycota,taxonomic_relative_abundance,feature,percent_relative_abundance,Ascomycota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Basidiomycota,taxonomic_relative_abundance,feature,percent_relative_abundance,Basidiomycota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Glomeromycota,taxonomic_relative_abundance,feature,percent_relative_abundance,Glomeromycota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Mortierellomycota,taxonomic_relative_abundance,feature,percent_relative_abundance,Mortierellomycota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Zygomycota,taxonomic_relative_abundance,feature,percent_relative_abundance,Zygomycota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Thaumarchaeota,taxonomic_relative_abundance,feature,percent_relative_abundance,Thaumarchaeota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Euryarchaeota,taxonomic_relative_abundance,feature,percent_relative_abundance,Euryarchaeota variable from integrated dataset.,"Negative values clipped to zero, then normalized within domain group."
+Nitrogen_Fixers,functional_microbes_pathogen,feature,not_applicable,Nitrogen_Fixers variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Phosphate_Solubilizers_PSB,functional_microbes_pathogen,feature,not_applicable,Phosphate_Solubilizers_PSB variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Potassium_Solubilizers,functional_microbes_pathogen,feature,not_applicable,Potassium_Solubilizers variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Mycorrhizae_AMF,functional_microbes_pathogen,feature,not_applicable,Mycorrhizae_AMF variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Trichoderma,functional_microbes_pathogen,feature,not_applicable,Trichoderma variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Pseudomonas_PGPR,functional_microbes_pathogen,feature,not_applicable,Pseudomonas_PGPR variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Fusarium,functional_microbes_pathogen,feature,not_applicable,Fusarium variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Pathogen_Load_Index,functional_microbes_pathogen,feature,not_applicable,Pathogen_Load_Index variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Microbial_Richness_Score,engineered_existing,feature,not_applicable,Microbial_Richness_Score variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Nutrient_Balance_Ratio,engineered_existing,feature,not_applicable,Nutrient_Balance_Ratio variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Soil_Health_Index,engineered_existing,feature,not_applicable,Soil_Health_Index variable from integrated dataset.,Numeric feature scaled in model-ready outputs.
+Mango_Yield,target,target,kg_per_tree,Mango yield target for regression.,
+Disease_Risk,target,target,not_applicable,Disease-risk class target.,
+Nutrient_Availability,target,target,not_applicable,Nutrient-availability class target.,
+Preprocessing_Status,preprocessing_metadata,identifier_or_metadata,not_applicable,Row-level preprocessing status.,
+Compositional_Normalization,preprocessing_metadata,identifier_or_metadata,not_applicable,Taxonomic normalization note.,

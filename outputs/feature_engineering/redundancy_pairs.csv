@@ -1,0 +1,6 @@
+Feature_A,Feature_B,Abs_Correlation
+Thaumarchaeota,Euryarchaeota,1.0
+Fusarium,Pathogen_Load_Index_Phase6,1.0
+Ascomycota,Fungal_Dominance_Index_Phase6,0.9999808227218279
+Nutrient_Balance_Ratio,NPK_Balance_Score_Phase6,0.9059722453237476
+Nutrient_Balance_Ratio,Soil_Health_Index,0.9005598352510015

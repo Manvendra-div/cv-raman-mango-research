@@ -1,0 +1,2 @@
+QC_Record_ID,Parent_Composite_ID,Sample_ID,Fraction,QC_Area,QC_Check,QC_Status,Issue_Description,Corrective_Action,Reviewed_By,Review_Date,Phase5_Ready,Notes
+QC-0001,MNG-MLD-O001-20270120-WIN-D1530-C01,MNG-MLD-O001-20270120-WIN-D1530-C01-CHEM,CHEM,Soil_Chemistry,Texture_Sum_Check,Pending,,,Reviewer_Name,2027-01-23,No,Example row - replace with QC review

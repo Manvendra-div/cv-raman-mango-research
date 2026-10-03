@@ -1,0 +1,2 @@
+Validation_Level,Status,Input_File,Template_File,Rows,Notes
+Field Intervention Validation,Pending field intervention data,data\validation\field_intervention_validation_input.csv,data\validation\field_intervention_validation_template.csv,0,"Populate treatment and control observations, then rerun Phase 10."

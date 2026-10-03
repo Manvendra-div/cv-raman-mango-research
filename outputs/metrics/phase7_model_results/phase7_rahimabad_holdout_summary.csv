@@ -1,0 +1,5 @@
+Task,Target,Model,Model_Role,Rahimabad_Rows,Primary_Metric,Primary_Value,Secondary_Metric,Secondary_Value,Additional_Metric,Additional_Value
+Regression,Mango_Yield,Linear_Regression,validation champion,5059,RMSE,1.984659310097413,MAE,1.594109030306306,R2,0.2725691169317418
+Regression,Mango_Yield,Elastic_Net,best Rahimabad RMSE,5059,RMSE,1.9845966508943305,MAE,1.5940555904227105,R2,0.2726150487646509
+Classification,Disease_Risk,Gradient_Boosting,validation champion,5059,Macro_F1,0.9912409004022156,Accuracy,0.9916979640245108,ROC_AUC,0.999831791430024
+Classification,Nutrient_Availability,Random_Forest,validation champion,5059,Macro_F1,0.9998022248782494,Accuracy,0.999802332476774,ROC_AUC,1.0

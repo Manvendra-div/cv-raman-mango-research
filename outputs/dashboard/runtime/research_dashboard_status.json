@@ -1,0 +1,8 @@
+﻿{
+    "pid":  6132,
+    "url":  "http://127.0.0.1:8502",
+    "started_at":  "2026-06-30T11:19:18",
+    "stdout":  "F:\\Mtech 2025-2027\\CV Raman Research Work Updated-vscode\\outputs\\dashboard\\runtime\\research_dashboard_stdout_20260630_111918.log",
+    "stderr":  "F:\\Mtech 2025-2027\\CV Raman Research Work Updated-vscode\\outputs\\dashboard\\runtime\\research_dashboard_stderr_20260630_111918.log",
+    "dashboard":  "src\\research_dashboard\\dashboard.py"
+}

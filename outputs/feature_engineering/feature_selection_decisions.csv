@@ -1,0 +1,72 @@
+Feature,Decision,Reason
+NPK_Balance_Score_Phase6,Selected,Biologically meaningful and non-redundant
+Diversity_Score_Phase6,Selected,Biologically meaningful and non-redundant
+Soil_Health_Index_Phase6,Selected,Biologically meaningful and non-redundant
+Beneficial_Microbial_Index_Phase6,Selected,Biologically meaningful and non-redundant
+Pathogen_Load_Index_Phase6,Selected,Biologically meaningful and non-redundant
+Soil_Chemical_Fertility_Score_Phase6,Selected,Biologically meaningful and non-redundant
+Biocontrol_Index_Phase6,Selected,Biologically meaningful and non-redundant
+Nutrient_Cycling_Index_Phase6,Selected,Biologically meaningful and non-redundant
+Soil_Physical_Condition_Score_Phase6,Selected,Biologically meaningful and non-redundant
+Pathogen_Beneficial_Ratio_Phase6,Selected,Biologically meaningful and non-redundant
+Available_P,Selected,Biologically meaningful and non-redundant
+Available_K,Selected,Biologically meaningful and non-redundant
+Total_Nitrogen,Selected,Biologically meaningful and non-redundant
+Climate_Comfort_Score_Phase6,Selected,Biologically meaningful and non-redundant
+EC,Selected,Biologically meaningful and non-redundant
+pH,Selected,Biologically meaningful and non-redundant
+Tree_Age,Selected,Biologically meaningful and non-redundant
+Trichoderma,Selected,Biologically meaningful and non-redundant
+Fusarium,Dropped,Redundant with Pathogen_Load_Index_Phase6 at abs correlation >= 0.95
+Organic_Carbon,Selected,Biologically meaningful and non-redundant
+Pseudomonas_PGPR,Selected,Biologically meaningful and non-redundant
+Micronutrient_Balance_Score_Phase6,Selected,Biologically meaningful and non-redundant
+Pathogen_Load_Index,Selected,Biologically meaningful and non-redundant
+Nutrient_Balance_Ratio,Selected,Biologically meaningful and non-redundant
+Soil_Health_Index,Selected,Biologically meaningful and non-redundant
+Microbial_Richness_Score,Selected,Biologically meaningful and non-redundant
+Shannon_Index,Selected,Biologically meaningful and non-redundant
+Pielou_Evenness,Selected,Biologically meaningful and non-redundant
+Simpson_Index,Selected,Biologically meaningful and non-redundant
+Richness_Evenness_Balance_Phase6,Selected,Biologically meaningful and non-redundant
+Rainfall,Selected,Biologically meaningful and non-redundant
+Mycorrhizae_AMF,Selected,Biologically meaningful and non-redundant
+Air_Temp_Avg,Selected,Biologically meaningful and non-redundant
+Euryarchaeota,Selected,Biologically meaningful and non-redundant
+Thaumarchaeota,Dropped,Redundant with Euryarchaeota at abs correlation >= 0.95
+Mn,Selected,Biologically meaningful and non-redundant
+Longitude,Dropped,Feature limit reached
+Soil_Moisture,Dropped,Feature limit reached
+Glomeromycota,Dropped,Feature limit reached
+Nitrogen_Fixers,Dropped,Feature limit reached
+OTU_Count,Dropped,Feature limit reached
+Beneficial_to_Pathogen_Log_Ratio_Phase6,Dropped,Feature limit reached
+Acidobacteria,Dropped,Feature limit reached
+Sand,Dropped,Feature limit reached
+Soil_Temperature,Dropped,Feature limit reached
+Proteobacteria,Dropped,Feature limit reached
+Zn,Dropped,Feature limit reached
+Basidiomycota,Dropped,Feature limit reached
+Bacteroidetes,Dropped,Feature limit reached
+Fe,Dropped,Feature limit reached
+CEC,Dropped,Feature limit reached
+Clay,Dropped,Feature limit reached
+Latitude,Dropped,Feature limit reached
+Solar_Radiation,Dropped,Feature limit reached
+Bulk_Density,Dropped,Feature limit reached
+Mortierellomycota,Dropped,Feature limit reached
+Fungal_Dominance_Index_Phase6,Dropped,Feature limit reached
+Ascomycota,Dropped,Feature limit reached
+Potassium_Solubilizers,Dropped,Feature limit reached
+Phosphate_Solubilizers_PSB,Dropped,Feature limit reached
+Silt,Dropped,Feature limit reached
+Texture_Balance_Score_Phase6,Dropped,Feature limit reached
+Actinobacteria,Dropped,Feature limit reached
+Zygomycota,Dropped,Feature limit reached
+Chao1_Richness,Dropped,Feature limit reached
+Firmicutes,Dropped,Feature limit reached
+Archaeal_Dominance_Index_Phase6,Dropped,Feature limit reached
+Cu,Dropped,Feature limit reached
+Bacterial_Dominance_Index_Phase6,Dropped,Feature limit reached
+C_N_Ratio,Dropped,Feature limit reached
+Humidity,Dropped,Feature limit reached

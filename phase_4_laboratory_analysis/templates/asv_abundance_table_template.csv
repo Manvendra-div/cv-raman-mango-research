@@ -1,0 +1,2 @@
+Parent_Composite_ID,DNA_Sample_ID,Sequencing_Target,Run_ID,Library_ID,Bioinformatics_Run_ID,Feature_ID,Feature_Type,Raw_Read_Count,Filtered_Read_Count,Non_Chimeric_Read_Count,Relative_Abundance,Relative_Abundance_Unit,Normalization_Method,Abundance_QC_Status,Notes
+MNG-MLD-O001-20270120-WIN-D1530-C01,MNG-MLD-O001-20270120-WIN-D1530-C01-16S,16S,RUN001,LIB001,BIO001,ASV_000001,ASV,,,,,percent,Relative_Abundance,Pending,Example row - replace with bioinformatics output

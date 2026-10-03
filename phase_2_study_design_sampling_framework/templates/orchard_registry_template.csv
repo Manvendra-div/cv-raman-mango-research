@@ -1,0 +1,2 @@
+Orchard_ID,Village,Village_Code,Latitude,Longitude,GPS_Accuracy_m,Consent_Code,Orchard_Area_Acre,Dominant_Mango_Variety,Secondary_Varieties,Dominant_Tree_Age_Years,Tree_Age_Class,Management,Productivity_History,Yield_History_kg_per_tree,Soil_Type_Local,Irrigation_Type,Disease_History,Accessibility_All_Seasons,Selected_For_Tier,Selection_Notes
+ORCH-MLD-001,Malihabad,MLD,,,,CONS-MLD-001,,Dashehari,,25,Mature,Integrated,High,,Alluvial loam,Flood,,Yes,Recommended,Example row - replace with field data

@@ -1,0 +1,148 @@
+Target,Output_Explained,Feature,Original_Feature,Mean_Abs_SHAP,Mean_SHAP,Spearman_Feature_SHAP,Transformed_Feature_Rank
+Mango_Yield,Predicted Mango_Yield,Soil_Health_Index,Soil_Health_Index,0.3889970769030906,-0.048051340443919004,-0.9999999999999999,1
+Mango_Yield,Predicted Mango_Yield,Nutrient_Balance_Ratio,Nutrient_Balance_Ratio,0.3367901528715654,-0.04323154303479913,0.9999999999999999,2
+Mango_Yield,Predicted Mango_Yield,Total_Nitrogen,Total_Nitrogen,0.20248032605026645,0.025382789877835578,0.9999999999999999,3
+Mango_Yield,Predicted Mango_Yield,Available_P,Available_P,0.20029818925521603,-0.04803479353798469,-0.9999999999999999,4
+Mango_Yield,Predicted Mango_Yield,Available_K,Available_K,0.1968547558306824,-0.01569725073921794,-0.9999999999999999,5
+Mango_Yield,Predicted Mango_Yield,Microbial_Richness_Score,Microbial_Richness_Score,0.1616472497122382,-0.004836538676399856,-0.9999999999999999,6
+Mango_Yield,Predicted Mango_Yield,Shannon_Index,Shannon_Index,0.11117198964113464,0.0009314739156593628,-0.9999999999999999,7
+Mango_Yield,Predicted Mango_Yield,Pielou_Evenness,Pielou_Evenness,0.09495641539995443,-0.009453448064603045,0.9999999999999999,8
+Mango_Yield,Predicted Mango_Yield,Simpson_Index,Simpson_Index,0.06867202669664534,0.0024943924730719373,-0.9999999999999999,9
+Mango_Yield,Predicted Mango_Yield,NPK_Balance_Score_Phase6,NPK_Balance_Score_Phase6,0.05168747762465377,0.0025558975382535144,-0.9999999999999999,10
+Mango_Yield,Predicted Mango_Yield,Mycorrhizae_AMF,Mycorrhizae_AMF,0.03657904238886675,-0.00570502750329085,-0.9999999999999999,11
+Mango_Yield,Predicted Mango_Yield,Richness_Evenness_Balance_Phase6,Richness_Evenness_Balance_Phase6,0.03460927952354502,0.00726116242992247,-0.9999999999999999,12
+Mango_Yield,Predicted Mango_Yield,Pseudomonas_PGPR,Pseudomonas_PGPR,0.03112252253498206,0.003772308825775212,-0.9999999999999999,13
+Mango_Yield,Predicted Mango_Yield,Village_Kakori,Village,0.030136409727566156,0.005304474439474912,-0.9999999999999999,14
+Mango_Yield,Predicted Mango_Yield,Organic_Carbon,Organic_Carbon,0.02637498491186165,0.005309378964063947,0.9999999999999999,15
+Mango_Yield,Predicted Mango_Yield,Village_Mall,Village,0.025963702974271714,0.0027002251093243375,,16
+Mango_Yield,Predicted Mango_Yield,Soil_Chemical_Fertility_Score_Phase6,Soil_Chemical_Fertility_Score_Phase6,0.024335195627514468,-0.0011884971998854113,-0.9999999999999999,17
+Mango_Yield,Predicted Mango_Yield,Sampling_Season_Post-monsoon,Sampling_Season,0.021848008804369046,-0.0003409653234771026,-0.9999999999999999,18
+Mango_Yield,Predicted Mango_Yield,Climate_Comfort_Score_Phase6,Climate_Comfort_Score_Phase6,0.020841195892578733,-0.0038745535392608393,0.9999999999999999,19
+Mango_Yield,Predicted Mango_Yield,Diversity_Score_Phase6,Diversity_Score_Phase6,0.01884243656753287,-0.002470879088629384,0.9999999999999999,20
+Mango_Yield,Predicted Mango_Yield,Sampling_Season_Winter,Sampling_Season,0.01764228756308947,0.0004831395687085099,0.9999999999999999,21
+Mango_Yield,Predicted Mango_Yield,Biocontrol_Index_Phase6,Biocontrol_Index_Phase6,0.015870322247919698,0.0011865559672505552,-0.9999999999999999,22
+Mango_Yield,Predicted Mango_Yield,Mn,Mn,0.015655615483340168,-0.0009896426685477115,0.9999999999999999,23
+Mango_Yield,Predicted Mango_Yield,Pathogen_Load_Index_Phase6,Pathogen_Load_Index_Phase6,0.01564341733135968,0.0002596902024470743,0.9999999999999999,24
+Mango_Yield,Predicted Mango_Yield,Air_Temp_Avg,Air_Temp_Avg,0.0144937969487305,0.00252548499036185,0.9999999999999999,25
+Mango_Yield,Predicted Mango_Yield,Pathogen_Beneficial_Ratio_Phase6,Pathogen_Beneficial_Ratio_Phase6,0.014429137967714337,0.002314184774628369,0.9999999999999999,26
+Mango_Yield,Predicted Mango_Yield,Management_Organic,Management,0.012783815363566493,0.0014462181306996401,-0.9999999999999999,27
+Mango_Yield,Predicted Mango_Yield,Tree_Age,Tree_Age,0.011956162461078699,0.003170286767398669,-0.9999999999999999,28
+Mango_Yield,Predicted Mango_Yield,Mango_Variety_Dashehari,Mango_Variety,0.01125357574978876,0.0003225006625133191,-0.9999999999999999,29
+Mango_Yield,Predicted Mango_Yield,Nutrient_Cycling_Index_Phase6,Nutrient_Cycling_Index_Phase6,0.01036414375000737,-1.291193957823022e-05,-0.9999999999999999,30
+Mango_Yield,Predicted Mango_Yield,Mango_Variety_Safeda,Mango_Variety,0.009206621123127123,-0.000669206074034064,,31
+Mango_Yield,Predicted Mango_Yield,Euryarchaeota,Euryarchaeota,0.009007071411329443,0.000946089799035953,0.9999999999999999,32
+Mango_Yield,Predicted Mango_Yield,Trichoderma,Trichoderma,0.008332672862678525,-0.0014443998347297854,-0.9999999999999999,33
+Mango_Yield,Predicted Mango_Yield,Management_Integrated,Management,0.007673616870727811,0.00026100737655469644,-0.9999999999999999,34
+Mango_Yield,Predicted Mango_Yield,Soil_Health_Index_Phase6,Soil_Health_Index_Phase6,0.007643787074359015,-0.0006662965795151357,-0.9999999999999999,35
+Mango_Yield,Predicted Mango_Yield,Soil_Physical_Condition_Score_Phase6,Soil_Physical_Condition_Score_Phase6,0.007281602857806989,0.0003520845843845205,0.9999999999999999,36
+Mango_Yield,Predicted Mango_Yield,Rainfall,Rainfall,0.006951167070709424,-0.00028741527670183225,0.9999999999999999,37
+Mango_Yield,Predicted Mango_Yield,EC,EC,0.006308323771897433,6.201477620729064e-05,-0.9999999999999999,38
+Mango_Yield,Predicted Mango_Yield,Soil_Depth_15-30,Soil_Depth,0.005803915069497666,0.0003624993177566535,0.9999999999999999,39
+Mango_Yield,Predicted Mango_Yield,Soil_Depth_0-15,Soil_Depth,0.005803915069497423,0.00036249931775617956,0.9999999999999999,40
+Mango_Yield,Predicted Mango_Yield,Management_Conventional,Management,0.004610967589049191,0.00038650815554177914,,41
+Mango_Yield,Predicted Mango_Yield,Mango_Variety_Langra,Mango_Variety,0.0043172844962538134,-0.0009482074737988105,,42
+Mango_Yield,Predicted Mango_Yield,pH,pH,0.004089305517304847,0.00021093218032117454,0.9999999999999999,43
+Mango_Yield,Predicted Mango_Yield,Mango_Variety_Chausa,Mango_Variety,0.0040767111212412655,-0.0005720214655431496,0.9999999999999999,44
+Mango_Yield,Predicted Mango_Yield,Pathogen_Load_Index,Pathogen_Load_Index,0.0035248462946554813,5.246904072431075e-05,0.9999999999999999,45
+Mango_Yield,Predicted Mango_Yield,Micronutrient_Balance_Score_Phase6,Micronutrient_Balance_Score_Phase6,0.0024465316087466356,0.0002459330788130158,-0.9999999999999999,46
+Mango_Yield,Predicted Mango_Yield,Sampling_Season_Pre-monsoon,Sampling_Season,0.002436486164908817,-0.00010682844843977461,,47
+Mango_Yield,Predicted Mango_Yield,Village_Malihabad,Village,0.0008351147506104853,6.297586643968581e-05,-0.9999999999999999,48
+Mango_Yield,Predicted Mango_Yield,Beneficial_Microbial_Index_Phase6,Beneficial_Microbial_Index_Phase6,0.0007430086754644145,2.9912158830241335e-05,0.9999999999999999,49
+Disease_Risk,Probability of High Disease_Risk,Pathogen_Load_Index,Pathogen_Load_Index,0.23187589398721176,0.0550896247659225,-0.9999999999999999,1
+Disease_Risk,Probability of High Disease_Risk,Soil_Health_Index,Soil_Health_Index,0.026489420400945873,0.012253285480670725,-0.9999999999999999,2
+Disease_Risk,Probability of High Disease_Risk,Nutrient_Balance_Ratio,Nutrient_Balance_Ratio,0.0006523662694335959,1.6342373667485978e-05,-0.9999999999999999,3
+Disease_Risk,Probability of High Disease_Risk,Shannon_Index,Shannon_Index,0.0003430758267005657,3.172457557555405e-05,-0.9999999999999999,4
+Disease_Risk,Probability of High Disease_Risk,Trichoderma,Trichoderma,0.00019301081713911624,-9.671466283631587e-05,-0.9999999999999999,5
+Disease_Risk,Probability of High Disease_Risk,NPK_Balance_Score_Phase6,NPK_Balance_Score_Phase6,0.0001744539431215707,3.345897912977678e-05,0.9999999999999999,6
+Disease_Risk,Probability of High Disease_Risk,Biocontrol_Index_Phase6,Biocontrol_Index_Phase6,0.0001451153259854048,4.337768612403459e-05,-0.9999999999999999,7
+Disease_Risk,Probability of High Disease_Risk,Simpson_Index,Simpson_Index,0.00012693256615094672,2.9781307645891843e-05,-0.9999999999999999,8
+Disease_Risk,Probability of High Disease_Risk,Diversity_Score_Phase6,Diversity_Score_Phase6,0.00012233677666122992,-1.0299603651113277e-05,-0.9999999999999999,9
+Disease_Risk,Probability of High Disease_Risk,Available_P,Available_P,0.00011863415733348515,4.821453503917864e-05,0.9999999999999999,10
+Disease_Risk,Probability of High Disease_Risk,Total_Nitrogen,Total_Nitrogen,0.00011826771365057591,-5.78083393336066e-05,-0.9999999999999999,11
+Disease_Risk,Probability of High Disease_Risk,Mycorrhizae_AMF,Mycorrhizae_AMF,0.0001043520240832981,-6.109289727960475e-05,0.9999999999999999,12
+Disease_Risk,Probability of High Disease_Risk,Pathogen_Load_Index_Phase6,Pathogen_Load_Index_Phase6,8.977250034340564e-05,1.9436507426783502e-05,-0.9999999999999999,13
+Disease_Risk,Probability of High Disease_Risk,Soil_Health_Index_Phase6,Soil_Health_Index_Phase6,7.77885108348113e-05,-1.2123640103500877e-05,0.9999999999999999,14
+Disease_Risk,Probability of High Disease_Risk,Rainfall,Rainfall,4.4499412128565055e-05,-1.1448620591192353e-05,0.9999999999999999,15
+Disease_Risk,Probability of High Disease_Risk,Soil_Chemical_Fertility_Score_Phase6,Soil_Chemical_Fertility_Score_Phase6,3.4586848903912575e-05,-3.043782052132578e-06,0.9999999999999999,16
+Disease_Risk,Probability of High Disease_Risk,Pathogen_Beneficial_Ratio_Phase6,Pathogen_Beneficial_Ratio_Phase6,3.438921759264488e-05,-1.1464704042630565e-05,0.9999999999999999,17
+Disease_Risk,Probability of High Disease_Risk,Available_K,Available_K,2.875057969019475e-05,-7.008315074573311e-06,-0.9999999999999999,18
+Disease_Risk,Probability of High Disease_Risk,pH,pH,2.8043009177072953e-05,1.365353340724067e-05,0.9999999999999999,19
+Disease_Risk,Probability of High Disease_Risk,Organic_Carbon,Organic_Carbon,2.033489936593886e-05,-1.0395524511352174e-05,0.9999999999999999,20
+Disease_Risk,Probability of High Disease_Risk,Richness_Evenness_Balance_Phase6,Richness_Evenness_Balance_Phase6,2.0224415080878558e-05,-1.341484833993824e-05,-0.9999999999999999,21
+Disease_Risk,Probability of High Disease_Risk,Management_Conventional,Management,8.961508072715753e-06,-1.5123862385954055e-06,,22
+Disease_Risk,Probability of High Disease_Risk,Tree_Age,Tree_Age,6.472902284500651e-06,6.424808710721129e-06,0.9999999999999999,23
+Disease_Risk,Probability of High Disease_Risk,Microbial_Richness_Score,Microbial_Richness_Score,6.292819188803682e-06,1.123649909364286e-06,-0.9999999999999999,24
+Disease_Risk,Probability of High Disease_Risk,Pielou_Evenness,Pielou_Evenness,3.3898068674761233e-06,3.366822378169289e-06,,25
+Disease_Risk,Probability of High Disease_Risk,EC,EC,2.487581858104185e-06,-2.5989262496619865e-07,0.9999999999999999,26
+Disease_Risk,Probability of High Disease_Risk,Climate_Comfort_Score_Phase6,Climate_Comfort_Score_Phase6,1.801772710092859e-06,-1.5259565108065669e-06,-0.9999999999999999,27
+Disease_Risk,Probability of High Disease_Risk,Mango_Variety_Chausa,Mango_Variety,1.4029623772771148e-06,1.4029623772771148e-06,,28
+Disease_Risk,Probability of High Disease_Risk,Nutrient_Cycling_Index_Phase6,Nutrient_Cycling_Index_Phase6,1.184421622499757e-06,1.184421407237671e-06,,29
+Disease_Risk,Probability of High Disease_Risk,Mango_Variety_Langra,Mango_Variety,3.5377467814490484e-07,3.5377467814490484e-07,,30
+Disease_Risk,Probability of High Disease_Risk,Beneficial_Microbial_Index_Phase6,Beneficial_Microbial_Index_Phase6,2.852304754393705e-07,-1.0720565716729645e-07,,31
+Disease_Risk,Probability of High Disease_Risk,Mn,Mn,1.5159305647857437e-07,-1.5159305647857437e-07,,32
+Disease_Risk,Probability of High Disease_Risk,Pseudomonas_PGPR,Pseudomonas_PGPR,1.399562362086376e-07,-1.3671621016345932e-07,,33
+Disease_Risk,Probability of High Disease_Risk,Mango_Variety_Dashehari,Mango_Variety,3.899893275797441e-08,3.899893275797441e-08,-0.9999999999999999,34
+Disease_Risk,Probability of High Disease_Risk,Air_Temp_Avg,Air_Temp_Avg,2.773355227159357e-08,2.773355227159357e-08,,35
+Disease_Risk,Probability of High Disease_Risk,Village_Malihabad,Village,1.3910494196439704e-08,1.1472026379076108e-08,,36
+Disease_Risk,Probability of High Disease_Risk,Micronutrient_Balance_Score_Phase6,Micronutrient_Balance_Score_Phase6,1.0956723781674991e-08,-5.935726081117769e-10,-0.9999999999999999,37
+Disease_Risk,Probability of High Disease_Risk,Euryarchaeota,Euryarchaeota,1.0507626342665594e-08,7.158535160456368e-09,,38
+Disease_Risk,Probability of High Disease_Risk,Mango_Variety_Safeda,Mango_Variety,6.339442099333346e-10,6.339442099333346e-10,,39
+Disease_Risk,Probability of High Disease_Risk,Soil_Physical_Condition_Score_Phase6,Soil_Physical_Condition_Score_Phase6,2.2097026827275525e-10,2.2097026827275525e-10,,40
+Disease_Risk,Probability of High Disease_Risk,Village_Kakori,Village,0.0,0.0,,41
+Disease_Risk,Probability of High Disease_Risk,Village_Mall,Village,0.0,0.0,,42
+Disease_Risk,Probability of High Disease_Risk,Soil_Depth_0-15,Soil_Depth,0.0,0.0,,43
+Disease_Risk,Probability of High Disease_Risk,Soil_Depth_15-30,Soil_Depth,0.0,0.0,,44
+Disease_Risk,Probability of High Disease_Risk,Sampling_Season_Post-monsoon,Sampling_Season,0.0,0.0,,45
+Disease_Risk,Probability of High Disease_Risk,Sampling_Season_Pre-monsoon,Sampling_Season,0.0,0.0,,46
+Disease_Risk,Probability of High Disease_Risk,Sampling_Season_Winter,Sampling_Season,0.0,0.0,,47
+Disease_Risk,Probability of High Disease_Risk,Management_Integrated,Management,0.0,0.0,,48
+Disease_Risk,Probability of High Disease_Risk,Management_Organic,Management,0.0,0.0,,49
+Nutrient_Availability,Probability of High Nutrient_Availability,Nutrient_Balance_Ratio,Nutrient_Balance_Ratio,0.36856172111837104,-0.01925770823847519,0.19999999999999998,1
+Nutrient_Availability,Probability of High Nutrient_Availability,Soil_Health_Index,Soil_Health_Index,0.05639051266033966,-0.002189471914697252,-0.39999999999999997,2
+Nutrient_Availability,Probability of High Nutrient_Availability,NPK_Balance_Score_Phase6,NPK_Balance_Score_Phase6,0.03193974102588161,-0.0029459317054543748,0.0,3
+Nutrient_Availability,Probability of High Nutrient_Availability,Available_P,Available_P,0.01487473757382744,-0.0027907221213581625,-0.6000000000000001,4
+Nutrient_Availability,Probability of High Nutrient_Availability,Available_K,Available_K,0.012147004174101379,-0.0007206329963405132,-0.7999999999999999,5
+Nutrient_Availability,Probability of High Nutrient_Availability,Total_Nitrogen,Total_Nitrogen,0.011496814281578938,0.002102140141340278,0.39999999999999997,6
+Nutrient_Availability,Probability of High Nutrient_Availability,Microbial_Richness_Score,Microbial_Richness_Score,0.010920418840663805,-0.0003037880136100095,0.19999999999999998,7
+Nutrient_Availability,Probability of High Nutrient_Availability,Shannon_Index,Shannon_Index,0.0028378489498679894,-9.599765621260256e-05,-0.19999999999999998,8
+Nutrient_Availability,Probability of High Nutrient_Availability,Soil_Chemical_Fertility_Score_Phase6,Soil_Chemical_Fertility_Score_Phase6,0.0018465595985532567,-0.00010760327115379147,-0.7999999999999999,9
+Nutrient_Availability,Probability of High Nutrient_Availability,Diversity_Score_Phase6,Diversity_Score_Phase6,0.0016853170347616686,0.00031146306801891764,1.0,10
+Nutrient_Availability,Probability of High Nutrient_Availability,Pielou_Evenness,Pielou_Evenness,0.0013926784476235728,0.0001143546000262091,0.39999999999999997,11
+Nutrient_Availability,Probability of High Nutrient_Availability,Simpson_Index,Simpson_Index,0.0013878862880626662,7.0847269165774e-05,-0.7999999999999999,12
+Nutrient_Availability,Probability of High Nutrient_Availability,Soil_Health_Index_Phase6,Soil_Health_Index_Phase6,0.0011421230890583337,8.18506936617705e-05,-0.7999999999999999,13
+Nutrient_Availability,Probability of High Nutrient_Availability,Richness_Evenness_Balance_Phase6,Richness_Evenness_Balance_Phase6,0.0007415756465714681,8.740372756899465e-05,-0.39999999999999997,14
+Nutrient_Availability,Probability of High Nutrient_Availability,pH,pH,0.0007262842261702614,4.8049370412071695e-05,-0.6000000000000001,15
+Nutrient_Availability,Probability of High Nutrient_Availability,Pathogen_Beneficial_Ratio_Phase6,Pathogen_Beneficial_Ratio_Phase6,0.0007148569522992157,4.914976108338612e-05,-0.7999999999999999,16
+Nutrient_Availability,Probability of High Nutrient_Availability,Climate_Comfort_Score_Phase6,Climate_Comfort_Score_Phase6,0.0007129734559378081,-0.0001805051972592406,-0.7999999999999999,17
+Nutrient_Availability,Probability of High Nutrient_Availability,Organic_Carbon,Organic_Carbon,0.0007066546544826649,9.791179172235232e-05,-0.6000000000000001,18
+Nutrient_Availability,Probability of High Nutrient_Availability,Beneficial_Microbial_Index_Phase6,Beneficial_Microbial_Index_Phase6,0.0006517838014895228,-5.020483552845145e-05,-0.39999999999999997,19
+Nutrient_Availability,Probability of High Nutrient_Availability,Mycorrhizae_AMF,Mycorrhizae_AMF,0.0006040231418786338,3.669905620156247e-05,-0.7999999999999999,20
+Nutrient_Availability,Probability of High Nutrient_Availability,Pseudomonas_PGPR,Pseudomonas_PGPR,0.0005925862096673583,-8.394787999566603e-05,-0.39999999999999997,21
+Nutrient_Availability,Probability of High Nutrient_Availability,EC,EC,0.0005923221146891722,-6.189418939227583e-05,0.7999999999999999,22
+Nutrient_Availability,Probability of High Nutrient_Availability,Rainfall,Rainfall,0.0005845745545819067,-6.966877591187583e-05,-0.6000000000000001,23
+Nutrient_Availability,Probability of High Nutrient_Availability,Trichoderma,Trichoderma,0.0005838279943651468,1.316009170614113e-05,-0.7999999999999999,24
+Nutrient_Availability,Probability of High Nutrient_Availability,Air_Temp_Avg,Air_Temp_Avg,0.0005694057171838129,7.359187845897977e-05,-0.39999999999999997,25
+Nutrient_Availability,Probability of High Nutrient_Availability,Pathogen_Load_Index_Phase6,Pathogen_Load_Index_Phase6,0.0005307084919020347,-8.317833074998793e-05,0.7999999999999999,26
+Nutrient_Availability,Probability of High Nutrient_Availability,Soil_Physical_Condition_Score_Phase6,Soil_Physical_Condition_Score_Phase6,0.0005058680465174005,-1.0051916700801841e-05,0.19999999999999998,27
+Nutrient_Availability,Probability of High Nutrient_Availability,Nutrient_Cycling_Index_Phase6,Nutrient_Cycling_Index_Phase6,0.0005042281687818287,0.00011090920757949804,-0.6000000000000001,28
+Nutrient_Availability,Probability of High Nutrient_Availability,Biocontrol_Index_Phase6,Biocontrol_Index_Phase6,0.0005034309663401608,1.781466216382651e-05,0.0,29
+Nutrient_Availability,Probability of High Nutrient_Availability,Mn,Mn,0.0005022211590468064,7.401695817489323e-05,-0.7999999999999999,30
+Nutrient_Availability,Probability of High Nutrient_Availability,Euryarchaeota,Euryarchaeota,0.0004756201879504367,1.382849142611242e-05,0.7999999999999999,31
+Nutrient_Availability,Probability of High Nutrient_Availability,Pathogen_Load_Index,Pathogen_Load_Index,0.0004198421225595801,-1.584821200219183e-05,0.6000000000000001,32
+Nutrient_Availability,Probability of High Nutrient_Availability,Tree_Age,Tree_Age,0.0003859542443458556,1.6688657712797457e-05,-0.19999999999999998,33
+Nutrient_Availability,Probability of High Nutrient_Availability,Micronutrient_Balance_Score_Phase6,Micronutrient_Balance_Score_Phase6,0.0003811520225662924,6.5881908046277064e-06,0.0,34
+Nutrient_Availability,Probability of High Nutrient_Availability,Village_Mall,Village,0.00028454876599429797,4.9656112223967585e-06,-0.7745966692414834,35
+Nutrient_Availability,Probability of High Nutrient_Availability,Village_Malihabad,Village,0.00021730644460666887,5.650923071495054e-06,0.2581988897471611,36
+Nutrient_Availability,Probability of High Nutrient_Availability,Village_Kakori,Village,0.00021212400716211666,-4.4809919362115866e-05,-0.7745966692414834,37
+Nutrient_Availability,Probability of High Nutrient_Availability,Management_Integrated,Management,0.00014646461452951998,3.2702968428694285e-05,-0.2581988897471611,38
+Nutrient_Availability,Probability of High Nutrient_Availability,Sampling_Season_Winter,Sampling_Season,0.00013474133819893228,9.185633708476132e-06,0.2581988897471611,39
+Nutrient_Availability,Probability of High Nutrient_Availability,Mango_Variety_Chausa,Mango_Variety,0.00012844578384914285,1.1493046881837767e-05,0.7745966692414834,40
+Nutrient_Availability,Probability of High Nutrient_Availability,Soil_Depth_15-30,Soil_Depth,0.00012455121756007684,-1.8327036318675676e-05,-0.8944271909999159,41
+Nutrient_Availability,Probability of High Nutrient_Availability,Sampling_Season_Pre-monsoon,Sampling_Season,0.00012432424045865658,2.889770859527421e-05,0.7745966692414834,42
+Nutrient_Availability,Probability of High Nutrient_Availability,Mango_Variety_Langra,Mango_Variety,0.0001137152578243233,6.697692074262611e-06,,43
+Nutrient_Availability,Probability of High Nutrient_Availability,Mango_Variety_Dashehari,Mango_Variety,0.0001124127121174147,4.8371010348088554e-06,-0.2581988897471611,44
+Nutrient_Availability,Probability of High Nutrient_Availability,Mango_Variety_Safeda,Mango_Variety,0.00010313489438636265,2.5055773892468968e-05,,45
+Nutrient_Availability,Probability of High Nutrient_Availability,Sampling_Season_Post-monsoon,Sampling_Season,0.00010296654688948806,8.036934901952e-06,0.0,46
+Nutrient_Availability,Probability of High Nutrient_Availability,Soil_Depth_0-15,Soil_Depth,0.0001013602321808984,-1.066274543291881e-06,0.0,47
+Nutrient_Availability,Probability of High Nutrient_Availability,Management_Conventional,Management,8.86918059318065e-05,-1.0240703822553202e-05,-0.4472135954999579,48
+Nutrient_Availability,Probability of High Nutrient_Availability,Management_Organic,Management,8.425411966324838e-05,-1.94700268553157e-05,-0.2581988897471611,49

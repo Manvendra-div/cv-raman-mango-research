@@ -1,0 +1,542 @@
+# Zone-Aware Mango Soil Intelligence and Yield Gap Decision Support System
+# .gitignore - Comprehensive repository security and hygiene
+# Generated: 2026-10-03
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# Ruff cache
+.ruff_cache/
+
+# ============================================================================
+# MACHINE LEARNING ARTIFACTS
+# ============================================================================
+
+# Trained Models (144MB total - regenerable from training scripts)
+# IMPORTANT: Champion models are preserved, but large ensemble models excluded
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.keras
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.model
+*.weights
+
+# Preserve champion model references (lightweight JSON pointers)
+!**/champion_*_model.json
+
+# MLflow / Experiment Tracking
+mlruns/
+mlflow-artifacts/
+wandb/
+.wandb/
+lightning_logs/
+tensorboard/
+runs/
+
+# Model checkpoints
+checkpoints/
+*.ckpt
+
+# ============================================================================
+# GENERATED OUTPUTS (257MB total - all regenerable)
+# ============================================================================
+
+# Predictions (97MB - regenerable from models)
+outputs/predictions/**/*.csv
+outputs/predictions/**/*.parquet
+
+# Large model artifacts in outputs/
+outputs/models/**/*.joblib
+outputs/models/**/*.pkl
+
+# XAI artifacts (16MB - regenerable from trained models)
+# Keep directory structure but exclude large visualization files
+outputs/explainability/**/*.png
+outputs/explainability/**/*.pdf
+outputs/explainability/**/*.html
+
+# Preserve README files in output directories
+!outputs/**/README.md
+
+# ============================================================================
+# PROCESSED DATA (90MB - regenerable from raw data)
+# ============================================================================
+
+# Processed datasets
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.feather
+
+# Split datasets
+data/splits/*.csv
+data/splits/*.parquet
+
+# Preserve critical processed metadata
+!data/processed/data_dictionary.csv
+!data/processed/selected_features.json
+!data/splits/split_membership.csv
+
+# Interim processing artifacts
+data/interim/**/*.csv
+data/interim/**/*.parquet
+
+# Feature tables (large, regenerable)
+data/processed/feature_table.csv
+data/processed/model_ready_*.csv
+
+# ============================================================================
+# RAW DATA MANAGEMENT
+# ============================================================================
+
+# Raw dataset is preserved (20MB - original research data)
+# But exclude if it becomes too large in future
+# data/raw/mango_microbiome_dataset.csv
+
+# Real field sample data (contains potential PII - always exclude)
+data/raw/real_sample_dataset/*.csv
+data/validation/*.csv
+
+# Exclude real farmer data
+data/raw/field_metadata/*_real.csv
+data/raw/chain_of_custody/*_real.csv
+
+# ============================================================================
+# CREDENTIALS AND SECRETS (CRITICAL SECURITY)
+# ============================================================================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+
+# API keys and tokens
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+auth.json
+token.json
+api_keys.txt
+
+# AWS credentials
+.aws/
+aws-credentials.json
+
+# Google Cloud credentials
+gcp-credentials.json
+service-account.json
+
+# SSH keys
+id_rsa
+id_rsa.pub
+*.ppk
+
+# Certificate files
+*.crt
+*.cer
+*.der
+
+# ============================================================================
+# DATABASES
+# ============================================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.pgsql
+
+# ============================================================================
+# OPERATING SYSTEM FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# IDE AND EDITOR FILES
+# ============================================================================
+
+# VSCode
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+*_archive
+*_flymake.*
+/eshell/history
+/eshell/lastdir
+/elpa/
+*.rel
+/auto/
+.cask/
+dist/
+flycheck_*.el
+/server/
+.projectile
+.dir-locals.el
+/network-security.data
+
+# ============================================================================
+# LOGS AND TEMPORARY FILES
+# ============================================================================
+
+# Log files
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*~
+tmp/
+temp/
+cache/
+
+# ============================================================================
+# DOCUMENTATION BUILD ARTIFACTS
+# ============================================================================
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# LaTeX
+*.aux
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*-converted-to.*
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# ============================================================================
+# RESEARCH-SPECIFIC EXCLUSIONS
+# ============================================================================
+
+# Large PDF documents (keep source .docx, exclude large PDFs)
+*.pdf
+!Research*.pdf
+
+# Word template artifacts
+Word_Template.zip
+word_template_extracted/
+
+# Archived results
+archive/
+old/
+backup/
+
+# Experimental notebooks (keep clean notebooks, exclude experiments)
+notebooks/experiments/
+notebooks/scratch/
+
+# ============================================================================
+# PROJECT-SPECIFIC PRESERVATIONS
+# ============================================================================
+
+# Preserve essential documentation
+!docs/**/*.md
+!phase_*/**/*.md
+!outputs/reports/**/*.md
+
+# Preserve templates
+!**/templates/*.csv
+!**/templates/*.json
+
+# Preserve README files throughout project
+!**/README.md
+
+# Preserve small configuration files
+!**/config.json
+!**/schema.json
+
+# Preserve the original research proposal PDFs
+!Research*Praposal.pdf
+!Dataset*summary*file.pdf
+!Real_Sample_Data_Collection_Proposal.pdf
+
+# ============================================================================
+# DOCKER AND CONTAINERS
+# ============================================================================
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# ============================================================================
+# CLOUD AND DEPLOYMENT
+# ============================================================================
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Kubernetes
+*.kubeconfig
+
+# ============================================================================
+# PACKAGE MANAGERS
+# ============================================================================
+
+# npm
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# ============================================================================
+# MISCELLANEOUS
+# ============================================================================
+
+# Compressed files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Exclude large compressed archives
+*.zip
+!Word_Template.zip
+
+# System files
+.fuse_hidden*
+
+# Git
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+# ============================================================================
+# END OF .gitignore
+# ============================================================================

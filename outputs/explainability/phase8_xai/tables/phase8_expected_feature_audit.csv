@@ -1,0 +1,9 @@
+Feature,Present_In_Dataset,Used_By_Champion_Feature_Set,Notes
+Pathogen_Load_Index,True,True,Direct model input
+Pathogen_Load_Index_Phase6,True,True,Direct model input
+Soil_Health_Index,True,True,Direct model input
+Soil_Health_Index_Phase6,True,True,Direct model input
+NPK_Balance_Score_Phase6,True,True,Direct model input
+Microbial_Richness_Score,True,True,Direct model input
+Fusarium,True,False,Available as raw context but not directly used by champion feature set
+Beneficial_Microbial_Index_Phase6,True,True,Direct model input

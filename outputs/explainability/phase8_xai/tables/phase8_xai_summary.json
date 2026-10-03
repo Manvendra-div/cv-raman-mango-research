@@ -1,0 +1,30 @@
+{
+  "phase": "8",
+  "status": "complete",
+  "targets_explained": [
+    "Mango_Yield",
+    "Disease_Risk",
+    "Nutrient_Availability"
+  ],
+  "shap_background_rows": 120,
+  "shap_explain_rows_per_target_requested": 220,
+  "local_explanations_per_target": 3,
+  "global_importance_rows": 234,
+  "transformed_shap_rows": 147,
+  "dependence_rows": 12,
+  "local_shap_rows": 108,
+  "lime_rows": 108,
+  "recommendation_rules": 7,
+  "instance_recommendations": 17,
+  "figures_generated": 48,
+  "report": "outputs\\reports\\phase8_explainable_ai\\phase8_explainable_ai_report.md",
+  "tables": {
+    "global_feature_importance": "outputs\\explainability\\phase8_xai\\tables\\phase8_global_feature_importance.csv",
+    "transformed_shap_importance": "outputs\\explainability\\phase8_xai\\tables\\phase8_shap_transformed_feature_importance.csv",
+    "dependence_thresholds": "outputs\\explainability\\phase8_xai\\tables\\phase8_shap_dependence_thresholds.csv",
+    "local_shap": "outputs\\explainability\\phase8_xai\\tables\\phase8_local_shap_explanations.csv",
+    "lime": "outputs\\explainability\\phase8_xai\\tables\\phase8_lime_local_explanations.csv",
+    "recommendation_rules": "outputs\\explainability\\phase8_xai\\tables\\phase8_recommendation_rules.csv",
+    "instance_recommendations": "outputs\\explainability\\phase8_xai\\tables\\phase8_instance_recommendations.csv"
+  }
+}

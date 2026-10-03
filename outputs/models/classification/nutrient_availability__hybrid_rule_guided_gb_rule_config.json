@@ -1,0 +1,52 @@
+{
+  "target": "Nutrient_Availability",
+  "terms": [
+    {
+      "feature": "NPK_Balance_Score_Phase6",
+      "weight": 1.2
+    },
+    {
+      "feature": "Soil_Chemical_Fertility_Score_Phase6",
+      "weight": 0.55
+    },
+    {
+      "feature": "Available_P",
+      "weight": 0.35
+    },
+    {
+      "feature": "Available_K",
+      "weight": 0.35
+    },
+    {
+      "feature": "Total_Nitrogen",
+      "weight": 0.25
+    }
+  ],
+  "feature_standardization": {
+    "NPK_Balance_Score_Phase6": {
+      "center": 36.79042504716683,
+      "scale": 14.824057199187367
+    },
+    "Soil_Chemical_Fertility_Score_Phase6": {
+      "center": 47.44599534659441,
+      "scale": 9.391508923028358
+    },
+    "Available_P": {
+      "center": 19.086324985751272,
+      "scale": 6.345130782986295
+    },
+    "Available_K": {
+      "center": 234.8320660172409,
+      "scale": 66.64052699661633
+    },
+    "Total_Nitrogen": {
+      "center": 273.94358505993915,
+      "scale": 72.19263704061461
+    }
+  },
+  "increase_class": "High",
+  "decrease_class": "Optimal",
+  "probability_multiplier": 0.055,
+  "probability_clip": 0.18,
+  "rationale": "Higher nutrient and fertility scores shift the current two-class target toward High."
+}

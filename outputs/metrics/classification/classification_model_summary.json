@@ -1,0 +1,44 @@
+{
+  "targets": [
+    "Disease_Risk",
+    "Nutrient_Availability"
+  ],
+  "rows": 20000,
+  "class_orders": {
+    "Disease_Risk": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "Nutrient_Availability": [
+      "Optimal",
+      "High"
+    ]
+  },
+  "models": [
+    "Gradient_Boosting",
+    "Hybrid_Rule_Guided_GB",
+    "Linear_SVM",
+    "Logistic_Regression",
+    "MLP_Classifier",
+    "Majority_Baseline",
+    "Random_Forest"
+  ],
+  "champion_models": {
+    "Disease_Risk": {
+      "model": "Gradient_Boosting",
+      "validation_macro_f1": 0.9901465246290658,
+      "validation_accuracy": 0.9906291834002677,
+      "validation_roc_auc": 0.9996000884014272
+    },
+    "Nutrient_Availability": {
+      "model": "Random_Forest",
+      "validation_macro_f1": 1.0,
+      "validation_accuracy": 1.0,
+      "validation_roc_auc": 1.0
+    }
+  },
+  "metrics_file": "outputs/metrics/classification/classification_model_metrics.csv",
+  "predictions_file": "outputs/predictions/classification/classification_predictions_all_models.csv",
+  "champion_pointer": "outputs/models/classification/champion_classification_models.json"
+}

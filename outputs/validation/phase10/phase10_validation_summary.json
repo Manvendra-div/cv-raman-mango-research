@@ -1,0 +1,35 @@
+{
+  "phase": "10",
+  "status": "complete",
+  "rows": 20000,
+  "kfold_splits": 5,
+  "rahimabad_rows": 5059,
+  "best_internal_regression_model": {
+    "model": "Elastic_Net",
+    "mean_rmse": 1.9810356379932355
+  },
+  "best_internal_classification_models": {
+    "Disease_Risk": {
+      "model": "Gradient_Boosting",
+      "mean_macro_f1": 0.9916486315411571
+    },
+    "Nutrient_Availability": {
+      "model": "Gradient_Boosting",
+      "mean_macro_f1": 0.9998999374546396
+    }
+  },
+  "real_sample_validation_status": "Pending real orchard samples",
+  "field_intervention_validation_status": "Pending field intervention data",
+  "outputs": {
+    "internal_cv_regression": "outputs\\validation\\phase10\\phase10_internal_cv_regression_metrics.csv",
+    "internal_cv_classification": "outputs\\validation\\phase10\\phase10_internal_cv_classification_metrics.csv",
+    "internal_cv_summary": "outputs\\validation\\phase10\\phase10_internal_cv_summary.csv",
+    "train_test_comparison": "outputs\\validation\\phase10\\phase10_train_test_split_comparison.csv",
+    "geographic_regression": "outputs\\validation\\phase10\\phase10_geographic_holdout_regression_metrics.csv",
+    "geographic_classification": "outputs\\validation\\phase10\\phase10_geographic_holdout_classification_metrics.csv",
+    "internal_vs_geographic": "outputs\\validation\\phase10\\phase10_internal_vs_geographic_summary.csv",
+    "real_sample_template": "data\\validation\\real_sample_validation_template.csv",
+    "field_intervention_template": "data\\validation\\field_intervention_validation_template.csv",
+    "report": "outputs\\reports\\phase10_validation\\phase10_validation_report.md"
+  }
+}

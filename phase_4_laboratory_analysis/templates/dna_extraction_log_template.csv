@@ -1,0 +1,2 @@
+Extraction_Record_ID,Parent_Composite_ID,DNA_Sample_ID,Input_Fraction,Sequencing_Target,Extraction_Batch_ID,Extraction_Date,Extraction_Kit_or_Method,Analyst,Input_Soil_Mass_g,DNA_Concentration_ng_per_uL,A260_280,A260_230,Extraction_Blank_ID,Storage_Condition,DNA_QC_Status,DNA_QC_Notes
+DNA-0001,MNG-MLD-O001-20270120-WIN-D1530-C01,MNG-MLD-O001-20270120-WIN-D1530-C01-16S,16S,16S,EXTB001,2027-01-21,Lab_Method_Name,Analyst_Name,0.25,,,,EBLK001,Frozen,Pending,Example row - replace with lab data

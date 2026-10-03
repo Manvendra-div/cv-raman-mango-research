@@ -1,0 +1,2 @@
+QC_Record_ID,Parent_Composite_ID,DNA_Sample_ID,Sequencing_Target,Run_ID,Library_ID,Bioinformatics_Run_ID,Forward_Read_File,Reverse_Read_File,Raw_Reads,Filtered_Reads,Denoised_Reads,Non_Chimeric_Reads,Feature_Count,Chimera_Rate_Percent,Blank_Contamination_Flag,Read_QC_Status,Denoising_QC_Status,Taxonomy_QC_Status,Overall_Microbiome_QC_Status,Notes
+SEQ-QC-0001,MNG-MLD-O001-20270120-WIN-D1530-C01,MNG-MLD-O001-20270120-WIN-D1530-C01-16S,16S,RUN001,LIB001,BIO001,,,,,,,,,No,Pending,Pending,Pending,Pending,Example row - replace with sequencing QC output

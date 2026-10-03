@@ -1,0 +1,13 @@
+﻿{
+    "phase":  "9",
+    "api_pid":  908,
+    "api_url":  "http://127.0.0.1:8000",
+    "api_docs_url":  "http://127.0.0.1:8000/docs",
+    "dashboard_pid":  20144,
+    "dashboard_url":  "http://127.0.0.1:8501",
+    "dashboard_ready":  true,
+    "api_stdout":  "outputs/dss/runtime/api_stdout.log",
+    "api_stderr":  "outputs/dss/runtime/api_stderr.log",
+    "dashboard_stdout":  "outputs/dss/runtime/dashboard_stdout.log",
+    "dashboard_stderr":  "outputs/dss/runtime/dashboard_stderr.log"
+}

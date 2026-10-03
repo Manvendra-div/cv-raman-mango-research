@@ -1,0 +1,2 @@
+Parent_Composite_ID,DNA_Sample_ID,Sequencing_Target,Run_ID,Library_ID,Bioinformatics_Run_ID,Feature_Table_Source,ASV_Count,OTU_Count,Shannon_Index,Simpson_Index,Chao1_Richness,Pielou_Evenness,Rarefaction_Depth,Normalization_Method,Diversity_QC_Status,Diversity_QC_Notes
+MNG-MLD-O001-20270120-WIN-D1530-C01,MNG-MLD-O001-20270120-WIN-D1530-C01-16S,16S,RUN001,LIB001,BIO001,16s_feature_table.qza,,,,,,,,None,Pending,Example row - replace with diversity output

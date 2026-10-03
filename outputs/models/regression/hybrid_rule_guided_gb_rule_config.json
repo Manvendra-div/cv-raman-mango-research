@@ -1,0 +1,5 @@
+{
+  "base_model": "GradientBoostingRegressor",
+  "adjustment_formula": "clip(0.004*(Soil_Health_Index_Phase6-50) + 0.003*(NPK_Balance_Score_Phase6-50) + 0.002*(Beneficial_Microbial_Index_Phase6-50) - 0.0035*(Pathogen_Load_Index_Phase6-50), -0.75, 0.75)",
+  "units": "kg_per_tree adjustment"
+}

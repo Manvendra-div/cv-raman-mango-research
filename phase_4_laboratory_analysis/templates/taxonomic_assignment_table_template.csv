@@ -1,0 +1,2 @@
+Sequencing_Target,Bioinformatics_Run_ID,Feature_ID,Feature_Type,Taxonomy_String,Kingdom,Phylum,Class,Order,Family,Genus,Species,Confidence,Reference_Database,Reference_Database_Version,Taxonomy_QC_Status,Notes
+16S,BIO001,ASV_000001,ASV,,,,,,,,,,SILVA,Version_To_Record,Pending,Example row - replace with taxonomy output

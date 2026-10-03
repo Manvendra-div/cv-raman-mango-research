@@ -1,0 +1,6 @@
+Visit_ID,Planned_Window_Start,Planned_Window_End,Field_Season,Season_Code,Model_Season,Phenological_Stage,Primary_Tasks,TierA_Core_Composites,TierA_QC_Composites,TierA_Total_Composites,TierB_Core_Composites,TierB_QC_Composites,TierB_Total_Composites,Notes
+PREP,2026-07-01,2026-12-15,Preparation,PREP,NA,Pre-field planning,"Orchard registry, consent, route planning, dry run, label printing",0,0,0,0,0,0,Preparation period because 2026 winter and pre-monsoon windows have passed
+V1,2027-01-15,2027-02-15,Winter_PreFlowering,WIN,Winter,Pre-flowering and flowering preparation,"Soil and rhizosphere baseline sampling, field disease scoring",24,3,27,72,8,80,Priority visit
+V2,2027-04-15,2027-05-15,PreMonsoon_FruitDevelopment,PRE,Pre-monsoon,Fruit setting and development,"Pre-monsoon stress, nutrient status, soil moisture context",24,3,27,72,8,80,Priority visit
+V3,2027-07-15,2027-08-15,Monsoon_PostHarvest,MON,Post-monsoon,Post-harvest and vegetative growth,"Optional quarterly microbiome shift sampling",24,3,27,72,8,80,Include if quarterly Tier C is funded
+V4,2027-10-15,2027-11-15,PostMonsoon_Dormancy,POST,Post-monsoon,Dormancy preparation,"Post-monsoon recovery and next-cycle soil status",24,3,27,72,8,80,Priority visit

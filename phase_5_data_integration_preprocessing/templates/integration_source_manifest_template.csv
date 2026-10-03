@@ -1,0 +1,2 @@
+Source_ID,Data_Type,File_Path,Expected_Key,Rows,Columns,QC_Status,Include_In_Master,Notes
+SRC-001,Synthetic_Raw,data/raw/mango_microbiome_dataset.csv,Sample_ID,20000,63,Pass,Yes,Current prototype source

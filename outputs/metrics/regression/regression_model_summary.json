@@ -1,0 +1,21 @@
+{
+  "target": "Mango_Yield",
+  "rows": 20000,
+  "models": [
+    "Elastic_Net",
+    "Gradient_Boosting",
+    "Hybrid_Rule_Guided_GB",
+    "LightGBM",
+    "Linear_Regression",
+    "Linear_SVR",
+    "MLP_Regressor",
+    "Mean_Baseline",
+    "Random_Forest",
+    "XGBoost"
+  ],
+  "champion_model": "Linear_Regression",
+  "champion_validation_RMSE": 1.9931895836481133,
+  "metrics_file": "outputs/metrics/regression/regression_model_metrics.csv",
+  "predictions_file": "outputs/predictions/regression/regression_predictions_all_models.csv",
+  "champion_pointer": "outputs/models/regression/champion_regression_model.json"
+}

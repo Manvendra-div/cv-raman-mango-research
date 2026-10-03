@@ -1,0 +1,14 @@
+{
+  "phase": "9",
+  "status": "complete",
+  "example_input": "outputs\\dss\\examples\\example_input.json",
+  "example_prediction_output": "outputs\\dss\\examples\\example_prediction_output.json",
+  "example_prediction_report": "outputs\\dss\\examples\\example_prediction_report.md",
+  "phase9_example_input": "phase_9_decision_support_system\\examples\\example_input.json",
+  "phase9_example_prediction_output": "phase_9_decision_support_system\\examples\\example_prediction_output.json",
+  "phase9_example_prediction_report": "phase_9_decision_support_system\\examples\\example_prediction_report.md",
+  "api_module": "src.dss.api:app",
+  "dashboard_script": "src/dss/dashboard.py",
+  "api_docs_url": "http://127.0.0.1:8000/docs",
+  "dashboard_url": "http://127.0.0.1:8501"
+}

@@ -1,0 +1,44 @@
+{
+  "target": "Disease_Risk",
+  "terms": [
+    {
+      "feature": "Pathogen_Load_Index_Phase6",
+      "weight": 1.0
+    },
+    {
+      "feature": "Pathogen_Beneficial_Ratio_Phase6",
+      "weight": 0.5
+    },
+    {
+      "feature": "Beneficial_Microbial_Index_Phase6",
+      "weight": -0.35
+    },
+    {
+      "feature": "Soil_Health_Index_Phase6",
+      "weight": -0.35
+    }
+  ],
+  "feature_standardization": {
+    "Pathogen_Load_Index_Phase6": {
+      "center": 50.03458589916345,
+      "scale": 28.634750704765057
+    },
+    "Pathogen_Beneficial_Ratio_Phase6": {
+      "center": 0.011783568775788403,
+      "scale": 0.013247249515848127
+    },
+    "Beneficial_Microbial_Index_Phase6": {
+      "center": 78.16538676009502,
+      "scale": 8.12926246380235
+    },
+    "Soil_Health_Index_Phase6": {
+      "center": 49.97974247979675,
+      "scale": 6.526094390219654
+    }
+  },
+  "increase_class": "High",
+  "decrease_class": "Low",
+  "probability_multiplier": 0.055,
+  "probability_clip": 0.18,
+  "rationale": "Higher pathogen pressure increases High risk; beneficial microbes and soil health reduce risk."
+}

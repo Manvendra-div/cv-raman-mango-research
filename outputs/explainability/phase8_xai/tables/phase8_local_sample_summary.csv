@@ -1,0 +1,10 @@
+Target,Output_Explained,Sample_ID,Split,Village,Actual_Value,Predicted_Value,Explained_Output_Value,Class_Of_Interest
+Mango_Yield,Predicted Mango_Yield,S06856,validation,Mall,22.982856157244584,23.79572116531924,23.79572116531924,
+Mango_Yield,Predicted Mango_Yield,S06020,validation,Mall,17.30493959838889,16.073818608129862,16.073818608129862,
+Mango_Yield,Predicted Mango_Yield,S17115,holdout_rahimabad,Rahimabad,24.029139541468613,23.619790513587535,23.619790513587535,
+Disease_Risk,Probability of High Disease_Risk,S03706,validation,Malihabad,High,High,0.9999579107129182,High
+Disease_Risk,Probability of High Disease_Risk,S07418,validation,Kakori,Medium,Medium,0.4824541209945792,High
+Disease_Risk,Probability of High Disease_Risk,S16090,holdout_rahimabad,Rahimabad,High,High,0.9999588867901757,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00087,validation,Mall,High,High,1.0,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S11809,validation,Kakori,Optimal,Optimal,0.24817596784800727,High
+Nutrient_Availability,Probability of High Nutrient_Availability,S00136,holdout_rahimabad,Rahimabad,High,High,1.0,High

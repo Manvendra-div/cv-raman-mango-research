@@ -1,0 +1,2 @@
+Custody_Record_ID,Visit_ID,Sample_ID,Parent_Composite_ID,Fraction,QC_Type,Custody_Event,Event_Date,Event_Time,Released_By,Received_By,Container_Condition,Label_Condition,Cold_Box_ID,Cold_Box_Temperature_C,Storage_Condition,Custody_Status,Deviation_Flag,Deviation_Description,Corrective_Action,Notes
+COC-V1-0001,V1,MNG-MLD-O001-20270120-WIN-D1530-C01-16S,MNG-MLD-O001-20270120-WIN-D1530-C01,16S,Core,Placed_In_Cold_Box,2027-01-20,09:45,Collector_Name,Field_Lead,Intact,Clear,CB01,,Cool_Box,In_Transit,No,,,Example row - replace with field data
