@@ -5,6 +5,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 
 from src.dss.service import DSSInput, get_service
+from src.dss.zone_service import get_zone_service
 
 
 app = FastAPI(
@@ -66,4 +67,46 @@ def report(payload: DSSInput) -> dict:
         "markdown_report": service.export_markdown_report(prediction),
         "prediction": prediction,
     }
+
+
+# ──────────────────────────────────────────────────────────────────────────
+# Zone Intelligence Endpoints
+# ──────────────────────────────────────────────────────────────────────────
+
+@app.post("/zone-analysis")
+def zone_analysis(payload: DSSInput) -> dict:
+    """Full zone intelligence analysis for a prediction."""
+    service = get_service()
+    zone_svc = get_zone_service()
+
+    prediction = service.predict(payload)
+    data = service.input_to_payload(payload)
+
+    zone_result = zone_svc.zone_analysis(
+        predicted_yield=prediction["predictions"]["Mango_Yield"]["value"],
+        village=payload.Village,
+        variety=payload.Mango_Variety,
+        tree_age=payload.Tree_Age,
+        management=payload.Management,
+        sample_values=data,
+        shap_contributions=prediction["explanations"].get("shap_values"),
+    )
+
+    return {
+        "sample_id": prediction["sample_id"],
+        "predicted_yield": prediction["predictions"]["Mango_Yield"]["value"],
+        "zone_intelligence": zone_result,
+    }
+
+
+@app.get("/zone-profiles")
+def zone_profiles() -> dict:
+    """Get village-level statistical profiles."""
+    return get_zone_service().village_profiles()
+
+
+@app.get("/available-zones")
+def available_zones() -> dict:
+    """List available villages, varieties, and management types."""
+    return get_zone_service().available_zones()
 

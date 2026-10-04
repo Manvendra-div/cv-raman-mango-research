@@ -129,6 +129,47 @@ def build_payload(metadata: dict[str, Any]) -> dict[str, Any]:
     return payload
 
 
+def render_zone_analysis(zone_data: dict[str, Any], predicted_yield: float) -> None:
+    """Render zone intelligence widgets."""
+    st.subheader("🌍 Zone Intelligence & Benchmarking")
+
+    # Comparable orchards summary
+    comp = zone_data["comparable_orchards"]
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Comparable Orchards", comp["orchard_count"])
+    col2.metric("Sample Count", comp["sample_count"])
+    col3.metric("Match Quality", "✓ Sufficient" if comp["sufficient"] else "⚠ Limited")
+
+    if comp["warnings"]:
+        st.info(f"Matching: {'; '.join(comp['warnings'])}")
+
+    # Yield gap analysis
+    gap = zone_data["yield_gap"]["primary"]
+    ref = zone_data["reference_yield"]
+
+    st.subheader("📊 Yield Gap Analysis")
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Predicted", f"{predicted_yield:.1f} kg/tree")
+    col2.metric("Zone Q75", f"{ref['q75']:.1f} kg/tree")
+    col3.metric("Gap", f"{gap['gap_absolute_kg']:.1f} kg/tree",
+                delta=f"{gap['gap_percentage']:.1f}%", delta_color="inverse")
+    col4.metric("Top 10%", f"{ref['top10_mean']:.1f} kg/tree")
+
+    st.caption(gap["interpretation"])
+
+    # Limiting factors
+    factors = zone_data.get("limiting_factors", [])
+    if factors:
+        st.subheader("⚠️ Limiting Factors")
+        factors_df = pd.DataFrame(factors)
+        display_cols = ["feature", "measured_value", "confidence", "severity_score", "recommendation"]
+        st.dataframe(
+            factors_df[display_cols].head(5),
+            use_container_width=True,
+            hide_index=True,
+        )
+
+
 def render_prediction(result: dict[str, Any]) -> None:
     predictions = result["predictions"]
     col1, col2, col3 = st.columns(3)
@@ -143,6 +184,13 @@ def render_prediction(result: dict[str, Any]) -> None:
         predictions["Nutrient_Availability"]["class"],
         f"{predictions['Nutrient_Availability']['confidence']:.1%} confidence",
     )
+
+    # Zone Intelligence (if available)
+    if "zone_intelligence" in result:
+        render_zone_analysis(
+            result["zone_intelligence"],
+            predictions['Mango_Yield']['value']
+        )
 
     st.subheader("Feature Contributions")
     target = st.selectbox("Target", ["Mango_Yield", "Disease_Risk", "Nutrient_Availability"])
@@ -185,14 +233,32 @@ def main() -> None:
     metadata = load_metadata()
     payload = build_payload(metadata)
 
+    enable_zone = st.sidebar.checkbox("Enable Zone Intelligence", value=True)
+
     if st.sidebar.button("Run Prediction", type="primary"):
         with st.spinner("Running DSS prediction"):
             try:
-                result = api_post("/predict", payload)
+                endpoint = "/zone-analysis" if enable_zone else "/predict"
+                result = api_post(endpoint, payload)
             except Exception:
                 from src.dss.service import get_service
+                from src.dss.zone_service import get_zone_service
 
                 result = get_service().predict(payload)
+
+                if enable_zone:
+                    zone_svc = get_zone_service()
+                    zone_result = zone_svc.zone_analysis(
+                        predicted_yield=result["predictions"]["Mango_Yield"]["value"],
+                        village=payload["Village"],
+                        variety=payload["Mango_Variety"],
+                        tree_age=payload["Tree_Age"],
+                        management=payload.get("Management"),
+                        sample_values=get_service().input_to_payload(payload),
+                        shap_contributions=result["explanations"].get("shap_values"),
+                    )
+                    result["zone_intelligence"] = zone_result
+
             result["input_payload"] = payload
             st.session_state["last_result"] = result
 
