@@ -171,6 +171,13 @@ def render_zone_analysis(zone_data: dict[str, Any], predicted_yield: float) -> N
 
 
 def render_prediction(result: dict[str, Any]) -> None:
+    if "predictions" not in result:
+        st.error(
+            "Prediction payload missing 'predictions' key. "
+            f"Got keys: {list(result.keys())}. Check API /predict vs /zone-analysis shape."
+        )
+        st.json({k: (str(v)[:500]) for k, v in result.items()})
+        return
     predictions = result["predictions"]
     col1, col2, col3 = st.columns(3)
     col1.metric("Mango Yield", f"{predictions['Mango_Yield']['value']:.2f} kg/tree")
@@ -238,8 +245,16 @@ def main() -> None:
     if st.sidebar.button("Run Prediction", type="primary"):
         with st.spinner("Running DSS prediction"):
             try:
-                endpoint = "/zone-analysis" if enable_zone else "/predict"
-                result = api_post(endpoint, payload)
+                # Always get base prediction first (/predict shape has "predictions").
+                result = api_post("/predict", payload)
+                if enable_zone:
+                    try:
+                        zone_resp = api_post("/zone-analysis", payload)
+                        # /zone-analysis returns {sample_id, predicted_yield, zone_intelligence}
+                        if isinstance(zone_resp, dict) and "zone_intelligence" in zone_resp:
+                            result["zone_intelligence"] = zone_resp["zone_intelligence"]
+                    except Exception as zone_err:
+                        st.warning(f"Zone analysis unavailable: {zone_err}")
             except Exception:
                 from src.dss.service import get_service
                 from src.dss.zone_service import get_zone_service

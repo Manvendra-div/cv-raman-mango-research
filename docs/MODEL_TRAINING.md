@@ -1,0 +1,2 @@
+# MODEL TRAINING
+Tasks: Yield regression (Dummy/Linear/Elastic/SVR/RF/GBM/MLP/XGB/LGBM; RMSE/MAE/R²), Disease (Dummy/LogReg/SVM/RF/GBM/MLP; Acc/Prec/Rec/macroF1/confusion/ROC-AUC), Nutrient (same; 3-class Deficient/Optimal/High via NBR thresholds). Champion by validation (not test). Artifacts: outputs/models/* (+artifacts mirror), configs, selected_features. Never assume GBM champion — re-benchmarked.

@@ -1,0 +1,2 @@
+# FEATURE ENGINEERING
+Formulas: Microbial_Richness=(Shannon/6*40+Simpson*30+Pielou*30); NBR=mean(P_norm,K_norm,N_norm) clipped [0.3,1]; SHI=pH*15+OC*20+(1-EC)*10+CEC*15+NBR*20+richness*20 clipped [40,95]. Selection inside train folds only (RF importance); compare all/selected/engineered/PCA. PCA evaluated, not forced for trees. Saved: data/processed/selected_features.json → artifacts/selected_features.json.
