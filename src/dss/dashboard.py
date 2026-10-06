@@ -46,6 +46,27 @@ def build_payload(metadata: dict[str, Any]) -> dict[str, Any]:
     categories = metadata["categorical_options"]
 
     st.sidebar.header("Orchard Input")
+    # Preset buttons: minimum for every parameter vs defaults
+    btn_min = st.sidebar.button("Load minimum for every parameter")
+    btn_default = st.sidebar.button("Reset to defaults")
+    if btn_min:
+        for _f, _info in ranges.items():
+            st.session_state[f"num_{_f}"] = float(_info["min"])
+        for _f in metadata["required_categorical_features"]:
+            _opts = categories[_f]
+            st.session_state[f"cat_{_f}"] = _opts[0]
+        st.session_state.pop("last_result", None)
+        st.rerun()
+    if btn_default:
+        for _f, _info in ranges.items():
+            _d = default_input.get(_f, _info["median"])
+            st.session_state[f"num_{_f}"] = float(min(max(float(_d), float(_info["min"])), float(_info["max"])))
+        for _f in metadata["required_categorical_features"]:
+            _opts = categories[_f]
+            _d = default_input.get(_f, _opts[0])
+            st.session_state[f"cat_{_f}"] = _d if _d in _opts else _opts[0]
+        st.session_state.pop("last_result", None)
+        st.rerun()
     sample_id = st.sidebar.text_input("Sample ID", value=str(default_input.get("Sample_ID", "DSS-example")))
 
     payload: dict[str, Any] = {"Sample_ID": sample_id}
@@ -106,13 +127,18 @@ def build_payload(metadata: dict[str, Any]) -> dict[str, Any]:
                 info = ranges[feature]
                 default = float(default_input.get(feature, info["median"]))
                 step = max((info["max"] - info["min"]) / 100.0, 0.0001)
+                key = f"num_{feature}"
+                init_val = min(max(default, float(info["min"])), float(info["max"]))
+                if key not in st.session_state:
+                    st.session_state[key] = init_val
                 payload[feature] = columns[index % 2].number_input(
                     feature,
                     min_value=float(info["min"]),
                     max_value=float(info["max"]),
-                    value=min(max(default, float(info["min"])), float(info["max"])),
+                    value=float(st.session_state[key]),
                     step=float(step),
                     format="%.6f",
+                    key=key,
                 )
 
     with tabs[3]:
@@ -120,10 +146,15 @@ def build_payload(metadata: dict[str, Any]) -> dict[str, Any]:
         for index, feature in enumerate(metadata["required_categorical_features"]):
             options = categories[feature]
             default = default_input.get(feature, options[0])
+            key = f"cat_{feature}"
+            if key not in st.session_state:
+                st.session_state[key] = default if default in options else options[0]
+            idx = options.index(st.session_state[key]) if st.session_state[key] in options else 0
             payload[feature] = cat_cols[index % 2].selectbox(
                 feature,
                 options,
-                index=options.index(default) if default in options else 0,
+                index=idx,
+                key=key,
             )
 
     return payload
@@ -170,6 +201,45 @@ def render_zone_analysis(zone_data: dict[str, Any], predicted_yield: float) -> N
         )
 
 
+def render_farmer_explainer(result: dict[str, Any], payload: dict[str, Any]) -> None:
+    """Personalized easy-words Do/Don't + what-if growth visuals (EN+HI)."""
+    from src.recommendations.personalized_explainer import (
+        build_personalized_plan, do_dont_table, plot_growth_chart,
+        DISCLAIMER_EN, DISCLAIMER_HI,
+    )
+    st.subheader("🧑‍🌾 Farmer Explainer — Easy Words / आसान भाषा")
+    zone = result.get("zone_intelligence", {})
+    factors = zone.get("limiting_factors", []) if isinstance(zone, dict) else []
+    ranked = [f["feature"] for f in factors if isinstance(f, dict) and "feature" in f][:5]
+    if not ranked:  # fallback: worst measured vs reference
+        ranked = ["Zn", "Organic_Carbon", "Pathogen_Load_Index", "Available_K", "pH"]
+    try:
+        from src.dss.service import get_service
+        svc = get_service()
+
+        def _py(sample: dict[str, Any]) -> float:
+            d = dict(payload)
+            d.update({k: sample.get(k, d.get(k)) for k in sample})
+            return float(svc.predict(d)["predictions"]["Mango_Yield"]["value"])
+
+        plan = build_personalized_plan(dict(payload), ranked, _py, top_n=3)
+    except Exception as e:
+        st.warning(f"Personalized estimate unavailable: {e}")
+        return
+    st.markdown(f"**Top focus for YOUR orchard:** {', '.join(plan['top_factors']) or '—'}")
+    st.dataframe(do_dont_table(plan["top_factors"]), use_container_width=True, hide_index=True)
+    chart_df = pd.DataFrame(plan["scenarios"])[["step_en", "gain_kg"]]
+    st.bar_chart(chart_df.set_index("step_en"))
+    st.dataframe(pd.DataFrame(plan["scenarios"]), use_container_width=True, hide_index=True)
+    try:
+        png = plot_growth_chart(plan["scenarios"], "reports/figures/farmer_growth_plan.png")
+        st.image(png, caption="Model-estimated extra yield if these improve (not a promise)")
+    except Exception:
+        pass
+    st.caption(f"⚠️ {DISCLAIMER_EN}")
+    st.caption(f"⚠️ {DISCLAIMER_HI}")
+
+
 def render_prediction(result: dict[str, Any]) -> None:
     if "predictions" not in result:
         st.error(
@@ -208,6 +278,8 @@ def render_prediction(result: dict[str, Any]) -> None:
     st.subheader("Recommendations")
     recommendations = pd.DataFrame(result["recommendations"])
     st.dataframe(recommendations, use_container_width=True, hide_index=True)
+
+    render_farmer_explainer(result, result.get("input_payload", {}))
 
     try:
         markdown_report = api_post("/report", result["input_payload"])["markdown_report"]
