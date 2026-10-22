@@ -182,6 +182,7 @@ class DSSService:
 
         return {
             "sample_id": payload.get("Sample_ID"),
+            "input_payload": dict(payload),
             "predictions": {
                 "Mango_Yield": {
                     "value": yield_prediction,
@@ -299,27 +300,188 @@ class DSSService:
             "recommendation_rules": str(RECOMMENDATION_RULES.relative_to(PROJECT_ROOT)),
         }
 
-    def export_markdown_report(self, prediction: dict[str, Any]) -> str:
+    def export_markdown_report(self, prediction: dict[str, Any]) -> str:  # noqa: C901
+        from datetime import datetime
         preds = prediction["predictions"]
-        lines = [
-            "# Mango Orchard DSS Prediction Report",
+        payload = prediction.get("input_payload", {})
+        lines: list[str] = [
+            "# Mango Orchard DSS — Full Prediction Report",
             "",
-            f"Sample ID: `{prediction.get('sample_id') or 'not provided'}`",
+            f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M')}  ",
+            f"**Sample ID:** `{prediction.get('sample_id') or 'not provided'}`  ",
+            f"**System:** Zone-Aware Mango Soil Intelligence and Yield Gap DSS  ",
             "",
-            "## Predictions",
-            "",
-            f"- Mango yield: `{preds['Mango_Yield']['value']:.3f}` kg/tree",
-            f"- Disease risk: `{preds['Disease_Risk']['class']}` "
-            f"(confidence `{preds['Disease_Risk']['confidence']:.3f}`)",
-            f"- Nutrient availability: `{preds['Nutrient_Availability']['class']}` "
-            f"(confidence `{preds['Nutrient_Availability']['confidence']:.3f}`)",
-            "",
-            "## Recommendations",
+            "> ⚠️ **Caveat:** " + prediction.get("caveat", ""),
             "",
         ]
-        for rec in prediction["recommendations"]:
-            lines.append(f"- `{rec['rule_id']}`: {rec['recommendation']}")
-        lines.extend(["", "## Caveat", "", prediction["caveat"]])
+
+        # ── 1. Input values ──────────────────────────────────────────────────
+        if payload:
+            lines += ["---", "", "## 1. Input Values", ""]
+            categorical = {k: v for k, v in payload.items() if isinstance(v, str)}
+            numeric = {k: v for k, v in payload.items() if isinstance(v, (int, float))}
+            if categorical:
+                lines.append("### Categorical")
+                lines.append("| Parameter | Value |")
+                lines.append("|---|---|")
+                for k, v in categorical.items():
+                    lines.append(f"| {k} | {v} |")
+                lines.append("")
+            if numeric:
+                lines.append("### Numeric")
+                lines.append("| Parameter | Value |")
+                lines.append("|---|---|")
+                for k, v in sorted(numeric.items()):
+                    lines.append(f"| {k} | {v:.4g} |")
+                lines.append("")
+
+        # ── 2. Predictions ───────────────────────────────────────────────────
+        lines += ["---", "", "## 2. Predictions", ""]
+        lines.append("| Target | Value | Confidence | Model |")
+        lines.append("|---|---|---|---|")
+        my = preds["Mango_Yield"]
+        lines.append(f"| Mango Yield | **{my['value']:.3f} kg/tree** | — | {my['model']} |")
+        dr = preds["Disease_Risk"]
+        lines.append(f"| Disease Risk | **{dr['class']}** | {dr['confidence']:.3f} | {dr['model']} |")
+        na = preds["Nutrient_Availability"]
+        lines.append(f"| Nutrient Availability | **{na['class']}** | {na['confidence']:.3f} | {na['model']} |")
+        lines.append("")
+
+        for target_key, target_label in [
+            ("Disease_Risk", "Disease Risk probabilities"),
+            ("Nutrient_Availability", "Nutrient Availability probabilities"),
+        ]:
+            probs = preds[target_key].get("probabilities", {})
+            if probs:
+                lines.append(f"**{target_label}:** " + ", ".join(f"{cls}: {p:.3f}" for cls, p in probs.items()))
+                lines.append("")
+
+        # ── 3. Feature contributions (explanations) ──────────────────────────
+        lines += ["---", "", "## 3. Feature Contributions (SHAP-based)", ""]
+        for target in ["Mango_Yield", "Disease_Risk", "Nutrient_Availability"]:
+            expls = prediction.get("explanations", {}).get(target, [])
+            if not expls:
+                continue
+            lines.append(f"### {target.replace('_', ' ')}")
+            lines.append("")
+            lines.append("| Rank | Feature | Input Value | Importance | Mean SHAP | Interpretation |")
+            lines.append("|---|---|---|---|---|---|")
+            for e in expls:
+                iv = f"{e.get('input_value', '—'):.4g}" if isinstance(e.get("input_value"), (int, float)) else "—"
+                imp = f"{e.get('importance', 0):.4f}"
+                shap = f"{e.get('mean_shap', 0):+.4f}"
+                interp = str(e.get("interpretation", ""))[:80]
+                lines.append(f"| {e.get('rank','—')} | {e.get('feature','—')} | {iv} | {imp} | {shap} | {interp} |")
+            lines.append("")
+
+        # ── 4. Zone intelligence ─────────────────────────────────────────────
+        zone = prediction.get("zone_intelligence")
+        if zone and isinstance(zone, dict):
+            lines += ["---", "", "## 4. Zone Intelligence", ""]
+            zp = zone.get("zone_profile", {})
+            if zp:
+                lines.append(f"**Zone:** {zp.get('village','—')} · {zp.get('variety','—')}  ")
+                lines.append(f"**Season:** {zp.get('season','—')}  ")
+                lines.append("")
+            ref = zone.get("reference_yield", {})
+            if ref:
+                lines.append("### Yield Benchmarks")
+                lines.append("| Metric | Value (kg/tree) |")
+                lines.append("|---|---|")
+                for k in ["q25", "q50_median", "q75", "mean", "top10_mean"]:
+                    v = ref.get(k)
+                    if v is not None:
+                        lines.append(f"| {k} | {v:.2f} |")
+                lines.append("")
+            gap = zone.get("yield_gap", {})
+            if gap:
+                lines.append("### Yield Gap")
+                def _gfmt(v, spec=".2f"):
+                    return format(v, spec) if isinstance(v, (int, float)) else str(v)
+                lines.append(f"- Observed yield: **{_gfmt(gap.get('observed_yield', '\u2014'))} kg/tree**")
+                lines.append(f"- Attainable benchmark (Q75): **{_gfmt(gap.get('attainable_yield', '\u2014'))} kg/tree**")
+                lines.append(f"- Gap vs attainable: **{_gfmt(gap.get('gap_vs_attainable', '\u2014'))} kg/tree"
+                             f" ({_gfmt(gap.get('gap_pct_attainable', '\u2014'), '.1f')}%)")
+                lines.append("")
+            lf = zone.get("limiting_factors", [])
+            if lf:
+                lines.append("### Potentially Limiting Factors (measured deficiency only)")
+                lines.append("| Factor | Measured | Reference Low | Severity |")
+                lines.append("|---|---|---|---|")
+                for f in lf[:10]:
+                    lines.append(f"| {f.get('feature','—')} | {f.get('measured_value','—')} "
+                                 f"| {f.get('reference_low','—')} | {f.get('severity_score','—')} |")
+                lines.append("")
+
+        # ── 5. Recommendations ───────────────────────────────────────────────
+        lines += ["---", "", "## 5. Agronomic Recommendations", ""]
+        recs = prediction.get("recommendations", [])
+        if recs:
+            lines.append("| Rule | Priority | Recommendation |")
+            lines.append("|---|---|---|")
+            for rec in recs:
+                rule_id = rec.get("rule_id", "—")
+                priority = rec.get("priority", "—")
+                recommendation = rec.get("recommendation", "")
+                lines.append(f"| `{rule_id}` | {priority} | {recommendation} |")
+        else:
+            lines.append("_No rules triggered on measured values._")
+        lines.append("")
+        lines.append("> Rules fire only on **measured** soil values vs ICAR-adapted reference ranges. "
+                     "Do not prescribe doses from this output — confirm with local agronomist.")
+        lines.append("")
+
+        # ── 6. Farmer explainer (bilingual Do/Don't) ─────────────────────────
+        try:
+            from src.recommendations.personalized_explainer import (
+                build_personalized_plan, do_dont_table, DISCLAIMER_EN, DISCLAIMER_HI,
+            )
+            zone_lf = (prediction.get("zone_intelligence") or {}).get("limiting_factors", [])
+            ranked = [f["feature"] for f in zone_lf if "feature" in f][:5]
+            if not ranked:
+                ranked = ["Zn", "Organic_Carbon", "Pathogen_Load_Index", "Available_K", "pH"]
+
+            def _noop_predict(sample: dict) -> float:
+                return float(preds["Mango_Yield"]["value"])
+
+            plan = build_personalized_plan(payload or {}, ranked, _noop_predict, top_n=3)
+            table = do_dont_table(plan["top_factors"])
+            if table:
+                lines += ["---", "", "## 6. Farmer Explainer — Easy Words / आसान भाषा", ""]
+                lines.append(f"**Top focus factors:** {', '.join(plan['top_factors'])}  ")
+                lines.append(f"**Baseline yield estimate:** {plan['baseline']:.2f} kg/tree  ")
+                lines.append("")
+                lines.append("| Factor | ✅ Do (EN) | ✅ करें (HI) | ❌ Don't (EN) | ❌ न करें (HI) | Why (EN) |")
+                lines.append("|---|---|---|---|---|---|")
+                for row in table:
+                    lines.append(f"| {row['Factor']} | {row['✅ Do (EN)']} | {row['✅ करें (HI)']} "
+                                 f"| {row['❌ Don\'t (EN)']} | {row['❌ न करें (HI)']} | {row['Why (EN)']} |")
+                lines.append("")
+                lines.append("### What-If Growth Estimates (model estimate, not a promise)")
+                lines.append("")
+                lines.append("| Scenario (EN) | Scenario (HI) | Changed | Estimated Yield | Gain (kg) | Gain (%) |")
+                lines.append("|---|---|---|---|---|---|")
+                for sc in plan["scenarios"]:
+                    lines.append(f"| {sc['step_en']} | {sc['step_hi']} | {sc['changed']} "
+                                 f"| {sc['predicted_yield']:.2f} | {sc['gain_kg']:+.2f} | {sc['gain_pct']:+.1f}% |")
+                lines.append("")
+                lines.append(f"> ⚠️ {DISCLAIMER_EN}")
+                lines.append(f"> ⚠️ {DISCLAIMER_HI}")
+                lines.append("")
+        except Exception:
+            pass
+
+        lines += ["---", "", "## 7. Reference Artifacts", ""]
+        ref_art = prediction.get("reference_artifacts", {})
+        if ref_art:
+            lines.append("| Key | Value |")
+            lines.append("|---|---|")
+            for k, v in ref_art.items():
+                lines.append(f"| {k} | {v} |")
+        else:
+            lines.append("_No reference artifacts available._")
+        lines.append("")
+
         return "\n".join(lines) + "\n"
 
 

@@ -11,6 +11,12 @@ if sec == "Overview":
     except Exception as e: st.error(f"API unreachable: {e}")
 elif sec == "Soil Input":
     st.subheader("Soil sample input (units shown)")
+    # Seed session_state BEFORE widgets exist; widgets read their value from it.
+    # (Passing both a default and a session-state value triggers a Streamlit warning.)
+    for _k, _v in (("sv_village", "Malihabad"), ("sv_variety", "Dashehari"),
+                   ("sv_ph", 7.0), ("sv_oc", 0.6), ("sv_zn", 0.8),
+                   ("sv_k", 200.0), ("sv_pli", 0.4)):
+        st.session_state.setdefault(_k, _v)
     if st.button("Load minimum for every parameter"):
         st.session_state["sv_village"] = "Malihabad"
         st.session_state["sv_variety"] = "Dashehari"
@@ -21,8 +27,8 @@ elif sec == "Soil Input":
         st.session_state["sv_pli"] = 0.0
         st.rerun()
     c1, c2 = st.columns(2)
-    with c1: village = st.selectbox("Village", ["Malihabad","Rahimabad","Kakori","Mall"], key="sv_village"); variety = st.selectbox("Variety", ["Dashehari","Chausa","Safeda","Langra"], key="sv_variety"); ph = st.number_input("pH (-)", 3.5, 10.5, 7.0, key="sv_ph"); oc = st.number_input("Organic Carbon (%)", 0.0, 5.0, 0.6, key="sv_oc")
-    with c2: zn = st.number_input("Zn (mg/kg)", 0.0, 50.0, 0.8, key="sv_zn"); k = st.number_input("Available K (kg/ha)", 0.0, 800.0, 200.0, key="sv_k"); pli = st.number_input("Pathogen Load Index (0-1)", 0.0, 1.0, 0.4, key="sv_pli")
+    with c1: village = st.selectbox("Village", ["Malihabad","Rahimabad","Kakori","Mall"], key="sv_village"); variety = st.selectbox("Variety", ["Dashehari","Chausa","Safeda","Langra"], key="sv_variety"); ph = st.number_input("pH (-)", 3.5, 10.5, key="sv_ph"); oc = st.number_input("Organic Carbon (%)", 0.0, 5.0, key="sv_oc")
+    with c2: zn = st.number_input("Zn (mg/kg)", 0.0, 50.0, key="sv_zn"); k = st.number_input("Available K (kg/ha)", 0.0, 800.0, key="sv_k"); pli = st.number_input("Pathogen Load Index (0-1)", 0.0, 1.0, key="sv_pli")
     st.info("Required: village, variety, pH, OC, Zn, K. Optional: full microbiome panel via API /predict.")
 else:
     st.subheader(sec)

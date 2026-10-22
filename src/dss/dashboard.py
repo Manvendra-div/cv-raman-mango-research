@@ -131,11 +131,13 @@ def build_payload(metadata: dict[str, Any]) -> dict[str, Any]:
                 init_val = min(max(default, float(info["min"])), float(info["max"]))
                 if key not in st.session_state:
                     st.session_state[key] = init_val
+                # value is intentionally omitted: the widget reads its value from
+                # session_state (pre-seeded above). Passing both raises a
+                # Streamlit "default value + session state" warning.
                 payload[feature] = columns[index % 2].number_input(
                     feature,
                     min_value=float(info["min"]),
                     max_value=float(info["max"]),
-                    value=float(st.session_state[key]),
                     step=float(step),
                     format="%.6f",
                     key=key,
@@ -150,10 +152,11 @@ def build_payload(metadata: dict[str, Any]) -> dict[str, Any]:
             if key not in st.session_state:
                 st.session_state[key] = default if default in options else options[0]
             idx = options.index(st.session_state[key]) if st.session_state[key] in options else 0
+            st.session_state[key] = options[idx]
+            # index omitted on purpose - session_state already holds the choice
             payload[feature] = cat_cols[index % 2].selectbox(
                 feature,
                 options,
-                index=idx,
                 key=key,
             )
 
@@ -281,12 +284,13 @@ def render_prediction(result: dict[str, Any]) -> None:
 
     render_farmer_explainer(result, result.get("input_payload", {}))
 
+    # Build the markdown report directly from the already-complete result dict
+    # (which already has zone_intelligence merged in). No extra API call needed.
     try:
-        markdown_report = api_post("/report", result["input_payload"])["markdown_report"]
-    except Exception:
         from src.dss.service import get_service
-
         markdown_report = get_service().export_markdown_report(result)
+    except Exception as _rpt_err:
+        markdown_report = f"# Report generation failed\n\n{_rpt_err}\n"
     st.download_button(
         "Download Markdown Report",
         data=markdown_report,

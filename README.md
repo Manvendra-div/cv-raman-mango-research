@@ -187,13 +187,35 @@ python src/validation/phase10_validation.py
 
 #### Option 2: Use Pre-Trained Models (Inference Only)
 
-**Start FastAPI Backend:**
+**One command (Linux/macOS):**
 ```bash
-uvicorn src.dss.api:app --host 0.0.0.0 --port 8000
+./start.sh
 ```
 
-**Start Streamlit Dashboard:**
+**One command (Windows):**
+```bat
+start.bat
+```
+
+Both scripts create the `.venv` if missing, install `requirements.txt`, start the
+API and the dashboard, and write logs to `logs/`. Useful flags:
+
+| Flag | Effect |
+|---|---|
+| `--install` | force reinstall of dependencies |
+| `--tests` | run `pytest` before starting |
+| `--backend-only` / `--frontend-only` | start one side only |
+| `--simple-frontend` | use the minimal `frontend/app.py` instead of the full dashboard |
+| `--api-port N` / `--ui-port N` | change ports (defaults 8000 / 8501) |
+
+**Manual start:**
+
 ```bash
+# FastAPI backend
+uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+# (legacy entry point still works: uvicorn src.dss.api:app --host 0.0.0.0 --port 8000)
+
+# Streamlit dashboard
 streamlit run src/dss/dashboard.py --server.port 8501
 ```
 
