@@ -38,15 +38,15 @@ Mango productivity in Uttar Pradesh is regulated by interactions among soil phys
 \section{Introduction}
 
 \subsection{Agricultural and Scientific Context}
-Beyond this, mango (\textit{Mangifera indica L.}) is specifically any second premier horticultural crop in India, holding huge economic and nutritional significance, particularly within the alluvial Gangetic plains of Uttar Pradesh, to one significant degree; more exactly, the Malihabad region is known globally for its premium mango cultivars, such as Dashehari, Chausa, Langra and Lucknow Safeda, in actual application. Still orchard productivity is typically sharing major spatial and temporal variability owing to mixed soil fertility, salinity, sub-soil moisture dynamics, microclimatic fluctuations\cite{bouskill2013}, tree age structures, and rhizosphere microbiome diversity\cite{singh2020}, in many respects.
+Beyond this, mango (\textit{Mangifera indica L.}) is specifically any second premier horticultural crop in India, holding huge economic and nutritional significance, particularly within the alluvial Gangetic plains of Uttar Pradesh, to one significant degree; more exactly, the Malihabad region is known globally for its premium mango cultivars, such as Dashehari, Chausa, Langra and Lucknow Safeda\cite{litz2009}, in actual application. Still orchard productivity is typically sharing major spatial and temporal variability owing to mixed soil fertility, salinity, sub-soil moisture dynamics, microclimatic fluctuations\cite{bouskill2013}, tree age structures, and rhizosphere microbiome diversity\cite{singh2020}, in many respects.
 
-Soil health and rhizosphere microbial communities play the foundational part in nutrient cycling, pathogen suppression, and plant vigor, on the whole\cite{vanderheijden2008,berendsen2012,mendes2011}. In light of this dynamic, good guilds spanning nitrogen-fixing bacteria, phosphate-solubilizing bacteria (PSB), arbuscular mycorrhizal fungi (AMF), and plant-growth-promoting rhizobacteria (PGPR) interact synergistically with soil physicochemical attributes (pH, organic carbon, available NPK, micronutrients) to gauge tree productivity and toughness against fungal pathogens such as \textit{Fusarium} wilt and anthracnose, in real-world scenarios. Along these dimensions, despite their critical importance, high-dimensional soil-microbiome data are principally complex and challenging\cite{fierer2017,bahram2018} for growers to construe intuitively, creating one urgent need for any integrated, quantitative and explainable decision support system (DSS), on the whole.
+Soil health and rhizosphere microbial communities play the foundational part in nutrient cycling, pathogen suppression, and plant vigor, on the whole\cite{vanderheijden2008,berendsen2012,mendes2011}. In light of this dynamic, good guilds spanning nitrogen-fixing bacteria, phosphate-solubilizing bacteria (PSB), arbuscular mycorrhizal fungi (AMF), and plant-growth-promoting rhizobacteria (PGPR) interact synergistically with soil physicochemical attributes (pH, organic carbon, available NPK, micronutrients) to gauge tree productivity and toughness against fungal pathogens such as \textit{Fusarium} wilt and anthracnose\cite{raaijmakers2009,philippot2013}, in real-world scenarios. Along these dimensions, despite their critical importance, high-dimensional soil-microbiome data are principally complex and challenging\cite{fierer2017,bahram2018,bardgett2014} for growers to construe intuitively, creating one urgent need for any integrated, quantitative and explainable decision support system (DSS), on the whole.
 
 \subsection{Decision-Support Problem}
-Remarkably, one more solid DSS must fulfill six core capabilities: (1) exactly estimate possible tree yield, under the local soil-climatic conditions; (2) classify orchard disease risk and nutrient status objectively; (3) transparently explain; (4) benchmark individual orchard performance against local peer cohorts; (5) stringently isolate measured nutrient deficiencies from embodied feature correlations; and (6) prevent inappropriate prescriptive fertilizer dosing framed directly from black-box feature attributions, broadly speaking. To explain, effective orchard management is, in practice, needing moving beyond generalized fertilizer recommendations toward the precision, zone-aware agronomic intelligence, in many respects.
+Remarkably, one more solid DSS must fulfill six core capabilities: (1) exactly estimate possible tree yield, under the local soil-climatic conditions; (2) classify orchard disease risk and nutrient status objectively; (3) transparently explain; (4) benchmark individual orchard performance against local peer cohorts; (5) stringently isolate measured nutrient deficiencies from embodied feature correlations; and (6) prevent inappropriate prescriptive fertilizer dosing framed directly from black-box feature attributions, broadly speaking. To explain, effective orchard management is, in practice, needing moving beyond generalized fertilizer recommendations toward the precision, zone-aware agronomic intelligence\cite{wolfert2017}, in many respects.
 
 \subsection{Research Gap}
-Previous agricultural machine learning studies regularly suffer from several methodological shortcomings - counting exclusively on random row-level train-test splits that are causing spatial information leakage; ignoring orchard-level spatial link directing to pseudo-replication; conflating statistical feature attribution with biological causation; and failing to offer geographic hold-out validation, across the separate agro-ecological sub-zones, in many respects. Building on this observation, against this backdrop, the put forward study tackles all these gaps by starting a leakage-aware modeling pipeline embedding orchard-grouped validation, spatial geographic hold-out testing, XAI guardrails, and zone benchmark comparisons, to a significant degree.
+Previous agricultural machine learning studies regularly suffer from several methodological shortcomings\cite{liakos2018} - counting exclusively on random row-level train-test splits that are causing spatial information leakage; ignoring orchard-level spatial link directing to pseudo-replication; conflating statistical feature attribution with biological causation; and failing to offer geographic hold-out validation, across the separate agro-ecological sub-zones, in many respects. Building on this observation, against this backdrop, the put forward study tackles all these gaps by starting a leakage-aware modeling pipeline embedding orchard-grouped validation, spatial geographic hold-out testing, XAI guardrails, and zone benchmark comparisons, to a significant degree.
 
 \subsection{Study Objectives}
 \textbf{Primary objective:} To design, execute and gauge a reproducible, zone-aware, and explainable decision support framework for mango soil-microbiome intelligence and yield-gap assessment, in real-world scenarios.
@@ -140,7 +140,7 @@ Soil Health Index & Composite multi-attribute score integrating SOM, pH, CEC, EC
 Feature selection was effectuated exclusively on training splits applying variance thresholds, correlation filtering, and tree-based importance ranking, keeping any maximum of $34$ numeric attributes and $5$ categorical encodings, on the whole; geographic hold-out data (Rahimabad) and test sets were excluded wholly from feature selection, in real-world scenarios.
 
 \subsection{Prediction Tasks and Candidate Models}
-Three supervised machine learning tasks were established:
+Three supervised machine learning tasks were established\cite{kamilaris2018}:
 1. \textbf{Mango Yield (Regression):} Continuous target in kg/tree. Evaluated models are spanning Mean Baseline, Linear Regression, Elastic Net, Random Forest~\cite{breiman2001}, Gradient Boosting~\cite{friedman2001}, and Linear SVR, on the whole.
 2. \textbf{Disease Risk (Classification):} Tri-class target (Low, Medium, High). Evaluated models are including Majority Baseline, Logistic Regression, Random Forest~\cite{breiman2001}, Gradient Boosting~\cite{friedman2001}, and Linear SVM, in many respects.
 3. \textbf{Nutrient Availability (Classification):} Tri-class target (Deficient, Best, High). Evaluated models are covering Majority Baseline, Logistic Regression, Random Forest~\cite{breiman2001}, Gradient Boosting~\cite{friedman2001}, and Linear SVM, broadly speaking.
@@ -300,7 +300,7 @@ Figure~\ref{fig:dss} reveals the applied deployment interface. In parallel with 
 What that arrangement reveals is solid technical feasibility in blending multi-modal soil physicochemical, microbiome, climate and orchard metadata into an explainable decision support architecture, in real-world scenarios. Taken together, stable generalization across sub-zones in the Lucknow mango belt is authenticated by internal and geographic validation, on the whole.
 
 \subsection{Interpretation of Yield Prediction Performance}
-A geographic hold-out RMSE of $1.984$ kg/tree ($R^2 \approx 0.273$) was reached by yield regression, which reflects the innate intricacy and multifactorial nature of constant tree fruit yield, on the whole; in fact, yield predictions should, in essence, seemingly are comparative planning benchmarks rather than absolute deterministic guarantees; while statistically notable, in actual application.
+A geographic hold-out RMSE of $1.984$ kg/tree ($R^2 \approx 0.273$) was reached by yield regression, which reflects the innate intricacy and multifactorial nature of constant tree fruit yield\cite{chlingaryan2018,vanklompenburg2020}, on the whole; in fact, yield predictions should, in essence, seemingly are comparative planning benchmarks rather than absolute deterministic guarantees; while statistically notable, in actual application.
 
 \subsection{Interpretation of Classification Performance}
 Disease risk and nutrient availability classification models showed high precision and macro-F1 scores ($\ge 0.990$), driven by strong empirical links between rhizosphere microbial community structures, pathogen indicators, and soil chemical fertility balances, broadly speaking.
@@ -339,7 +339,7 @@ Contrasted to previous studies that are counting solely on satellite vegetation 
 One broad, zone-aware, and explainable decision support framework for mango soil-microbiome intelligence is showed by the put forward inquiry, on the whole; also, by coupling multi-task predictive modelling with leakage-aware spatial validation, TreeSHAP and LIME explainability, and zone benchmarking, the framework delivers transparent, doable agronomic guidance for sustainable subtropical horticulture, on the whole.
 
 
-\begin{thebibliography}{25}
+\begin{thebibliography}{45}
 
 \bibitem{lundberg2017}
 Lundberg, S.M., Lee, S.I.: A unified approach to interpreting model predictions. In: Advances in Neural Information Processing Systems, vol. 30, pp. 4765--4774 (2017). \url{https://proceedings.neurips.cc/paper/2017}
@@ -417,6 +417,66 @@ Dormann, C.F. et al.: Methods to account for spatial autocorrelation in the anal
 
 \bibitem{arrieta2020}
 Arrieta, A.B. et al.: Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Inf. Fusion \textbf{58}, 82--115 (2020). \url{https://doi.org/10.1016/j.inffus.2019.12.012}
+
+\bibitem{liakos2018}
+Liakos, K.G., Busato, P., Moshou, D., Pearson, S., Bochtis, D.: Machine learning in agriculture: A review. Sensors \textbf{18}(8), 2674 (2018). \url{https://doi.org/10.3390/s18082674}
+
+\bibitem{kamilaris2018}
+Kamilaris, A., Prenafeta-Boldú, F.X.: Deep learning in agriculture: A survey. Comput. Electron. Agric. \textbf{147}, 70--90 (2018). \url{https://doi.org/10.1016/j.compag.2018.02.016}
+
+\bibitem{chlingaryan2018}
+Chlingaryan, A., Sukkarieh, S., Whelan, B.: Machine learning approaches for crop yield prediction and nitrogen status estimation in precision agriculture. Comput. Electron. Agric. \textbf{151}, 61--69 (2018). \url{https://doi.org/10.1016/j.compag.2018.05.012}
+
+\bibitem{vanklompenburg2020}
+van Klompenburg, T., Kassahun, A., Catal, C.: Crop yield prediction using machine learning: A systematic literature review. Comput. Electron. Agric. \textbf{177}, 105709 (2020). \url{https://doi.org/10.1016/j.compag.2020.105709}
+
+\bibitem{trivedi2016}
+Trivedi, P., Delgado-Baquerizo, M., Anderson, I.C., Singh, B.K.: Response of soil properties and microbial communities to agriculture: Implications for primary productivity and soil health indicators. Front. Plant Sci. \textbf{7}, 990 (2016). \url{https://doi.org/10.3389/fpls.2016.00990}
+
+\bibitem{raaijmakers2009}
+Raaijmakers, J.M., Paulitz, T.C., Steinberg, C., Alabouvette, C., Moënne-Loccoz, Y.: The rhizosphere: a playground and battlefield for soilborne pathogens and beneficial microorganisms. Plant Soil \textbf{321}, 341--361 (2009). \url{https://doi.org/10.1007/s11104-008-9568-6}
+
+\bibitem{bardgett2014}
+Bardgett, R.D., van der Putten, W.H.: Belowground biodiversity and ecosystem functioning. Nature \textbf{515}, 505--511 (2014). \url{https://doi.org/10.1038/nature13855}
+
+\bibitem{philippot2013}
+Philippot, L., Raaijmakers, J.M., Lemanceau, P., van der Putten, W.H.: Going back to the roots: the microbial ecology of the rhizosphere. Nat. Rev. Microbiol. \textbf{11}, 789--799 (2013). \url{https://doi.org/10.1038/nrmicro3109}
+
+\bibitem{compant2019}
+Compant, S., Samad, A., Faist, H., Sessitsch, A.: A review on the plant microbiome: Ecology, functions, and emerging trends in microbial application. J. Adv. Res. \textbf{19}, 29--37 (2019). \url{https://doi.org/10.1016/j.jare.2019.03.004}
+
+\bibitem{gebbers2010}
+Gebbers, R., Adamchuk, V.I.: Precision agriculture and food security. Science \textbf{327}, 828--831 (2010). \url{https://doi.org/10.1126/science.1183899}
+
+\bibitem{wolfert2017}
+Wolfert, S., Ge, L., Verdouw, C., Bogaardt, M.J.: Big data in smart farming -- A review. Agric. Syst. \textbf{153}, 69--80 (2017). \url{https://doi.org/10.1016/j.agsy.2017.01.023}
+
+\bibitem{coble1990}
+Coble, H.D., Mortensen, D.A.: The threshold concept and its application to weed science. Weed Technol. \textbf{6}(1), 191--195 (1992). \url{https://doi.org/10.1017/S0890037X00035400}
+
+\bibitem{molnar2019}
+Molnar, C.: Interpretable Machine Learning: A Guide for Making Black Box Models Explainable. Leanpub (2019). \url{https://christophm.github.io/interpretable-ml-book/}
+
+\bibitem{rudin2019}
+Rudin, C.: Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat. Mach. Intell. \textbf{1}, 206--215 (2019). \url{https://doi.org/10.1038/s42256-019-0048-x}
+
+\bibitem{doshivelez2017}
+Doshi-Velez, F., Kim, B.: Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608 (2017). \url{https://arxiv.org/abs/1702.08608}
+
+\bibitem{mukherjee1953}
+Mukherjee, S.K.: The mango -- its botany, cultivation, uses and future improvement, especially as observed in India. Econ. Bot. \textbf{7}(2), 130--162 (1953). \url{https://doi.org/10.1007/BF02984948}
+
+\bibitem{litz2009}
+Litz, R.E. (ed.): The Mango: Botany, Production and Uses, 2nd edn. CABI, Wallingford (2009). \url{https://doi.org/10.1079/9781845934897.0000}
+
+\bibitem{kulkarni2004}
+Kulkarni, V.J.: Mango production in India. Acta Hortic. \textbf{645}, 115--122 (2004). \url{https://doi.org/10.17660/ActaHortic.2004.645.12}
+
+\bibitem{nannipieri2003}
+Nannipieri, P. et al.: Microbial diversity and soil functions. Eur. J. Soil Sci. \textbf{54}, 655--670 (2003). \url{https://doi.org/10.1046/j.1351-0754.2003.0556.x}
+
+\bibitem{lehmann2015}
+Lehmann, J., Kleber, M.: The contentious nature of soil organic matter. Nature \textbf{528}, 60--68 (2015). \url{https://doi.org/10.1038/nature16069}
 
 \end{thebibliography}
 
