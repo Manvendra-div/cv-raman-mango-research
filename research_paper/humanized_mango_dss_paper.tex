@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
+\usepackage[hidelinks]{hyperref}
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
@@ -38,12 +39,12 @@ Mango productivity in Uttar Pradesh is regulated by interactions among soil phys
 \section{Introduction}
 
 \subsection{Agricultural and Scientific Context}
-Beyond this, mango (\textit{Mangifera indica L.}) is specifically any second premier horticultural crop in India, holding huge economic and nutritional significance, particularly within the alluvial Gangetic plains of Uttar Pradesh, to one significant degree; more exactly, the Malihabad region is known globally for its premium mango cultivars, such as Dashehari, Chausa, Langra and Lucknow Safeda\cite{litz2009}, in actual application. Still orchard productivity is typically sharing major spatial and temporal variability owing to mixed soil fertility, salinity, sub-soil moisture dynamics, microclimatic fluctuations\cite{bouskill2013}, tree age structures, and rhizosphere microbiome diversity\cite{singh2020}, in many respects.
+Beyond this, mango (\textit{Mangifera indica L.}) is specifically any second premier horticultural crop in India, holding huge economic and nutritional significance, particularly within the alluvial Gangetic plains of Uttar Pradesh, to one significant degree; more exactly, the Malihabad region is known globally for its premium mango cultivars, such as Dashehari, Chausa, Langra and Lucknow Safeda\cite{mukherjee1953,kulkarni2004,litz2009}, in actual application. Still orchard productivity is typically sharing major spatial and temporal variability owing to mixed soil fertility, salinity, sub-soil moisture dynamics, microclimatic fluctuations\cite{bouskill2013}, tree age structures, and rhizosphere microbiome diversity\cite{singh2020}, in many respects.
 
-Soil health and rhizosphere microbial communities play the foundational part in nutrient cycling, pathogen suppression, and plant vigor, on the whole\cite{vanderheijden2008,berendsen2012,mendes2011}. In light of this dynamic, good guilds spanning nitrogen-fixing bacteria, phosphate-solubilizing bacteria (PSB), arbuscular mycorrhizal fungi (AMF), and plant-growth-promoting rhizobacteria (PGPR) interact synergistically with soil physicochemical attributes (pH, organic carbon, available NPK, micronutrients) to gauge tree productivity and toughness against fungal pathogens such as \textit{Fusarium} wilt and anthracnose\cite{raaijmakers2009,philippot2013}, in real-world scenarios. Along these dimensions, despite their critical importance, high-dimensional soil-microbiome data are principally complex and challenging\cite{fierer2017,bahram2018,bardgett2014} for growers to construe intuitively, creating one urgent need for any integrated, quantitative and explainable decision support system (DSS), on the whole.
+Soil health and rhizosphere microbial communities play the foundational part in nutrient cycling, pathogen suppression, and plant vigor, on the whole\cite{vanderheijden2008,berendsen2012,mendes2011,trivedi2016,compant2019}. In light of this dynamic, good guilds spanning nitrogen-fixing bacteria, phosphate-solubilizing bacteria (PSB), arbuscular mycorrhizal fungi (AMF), and plant-growth-promoting rhizobacteria (PGPR) interact synergistically with soil physicochemical attributes (pH, organic carbon, available NPK, micronutrients) to gauge tree productivity and toughness against fungal pathogens such as \textit{Fusarium} wilt and anthracnose\cite{raaijmakers2009,philippot2013}, in real-world scenarios. Along these dimensions, despite their critical importance, high-dimensional soil-microbiome data are principally complex and challenging\cite{fierer2017,bahram2018,bardgett2014} for growers to construe intuitively, creating one urgent need for any integrated, quantitative and explainable decision support system (DSS), on the whole.
 
 \subsection{Decision-Support Problem}
-Remarkably, one more solid DSS must fulfill six core capabilities: (1) exactly estimate possible tree yield, under the local soil-climatic conditions; (2) classify orchard disease risk and nutrient status objectively; (3) transparently explain; (4) benchmark individual orchard performance against local peer cohorts; (5) stringently isolate measured nutrient deficiencies from embodied feature correlations; and (6) prevent inappropriate prescriptive fertilizer dosing framed directly from black-box feature attributions, broadly speaking. To explain, effective orchard management is, in practice, needing moving beyond generalized fertilizer recommendations toward the precision, zone-aware agronomic intelligence\cite{wolfert2017}, in many respects.
+Remarkably, one more solid DSS must fulfill six core capabilities: (1) exactly estimate possible tree yield, under the local soil-climatic conditions; (2) classify orchard disease risk and nutrient status objectively; (3) transparently explain; (4) benchmark individual orchard performance against local peer cohorts; (5) stringently isolate measured nutrient deficiencies from embodied feature correlations; and (6) prevent inappropriate prescriptive fertilizer dosing framed directly from black-box feature attributions, broadly speaking. To explain, effective orchard management is, in practice, needing moving beyond generalized fertilizer recommendations toward the precision, zone-aware agronomic intelligence\cite{wolfert2017,gebbers2010}, in many respects.
 
 \subsection{Research Gap}
 Previous agricultural machine learning studies regularly suffer from several methodological shortcomings\cite{liakos2018} - counting exclusively on random row-level train-test splits that are causing spatial information leakage; ignoring orchard-level spatial link directing to pseudo-replication; conflating statistical feature attribution with biological causation; and failing to offer geographic hold-out validation, across the separate agro-ecological sub-zones, in many respects. Building on this observation, against this backdrop, the put forward study tackles all these gaps by starting a leakage-aware modeling pipeline embedding orchard-grouped validation, spatial geographic hold-out testing, XAI guardrails, and zone benchmark comparisons, to a significant degree.
@@ -152,10 +153,10 @@ To guarantee solid generalization assessment grounded in cross-validation standa
 Remarkably, models were retrained on all $14{,}941$ non-Rahimabad rows and judged solely on Rahimabad, so - \textbf{Geographic Hold-Out Validation:} Complete spatial hold-out applying all $5{,}059$ handled samples from Rahimabad, in many respects.
 
 \subsection{Explainable AI (XAI) Framework}
-Model interpretability was realized applying TreeSHAP~\cite{lundberg2017} and LinearExplainer for global feature importance and beeswarm distributions, alongside SHAP waterfall plots and LIME (Local Interpretable Model-agnostic Explanations)~\cite{ribeiro2016} to illustrate-level local diagnostics, underpinned by overarching explainable AI taxonomies~\cite{arrieta2020}, supported by foundational soil quality frameworks~\cite{bunemann2018}, fungal metacommunity network analysis~\cite{toju2018}, soil organic carbon and PLFA microbial marker indicators~\cite{fanin2019}, and microbial necromass dynamics~\cite{liang2020}, on the whole.
+Model interpretability was realized applying TreeSHAP~\cite{lundberg2017} and LinearExplainer for global feature importance and beeswarm distributions, alongside SHAP waterfall plots and LIME (Local Interpretable Model-agnostic Explanations)~\cite{ribeiro2016} to illustrate-level local diagnostics, underpinned by overarching explainable AI taxonomies~\cite{arrieta2020,molnar2019,rudin2019,doshivelez2017}, supported by foundational soil quality frameworks~\cite{bunemann2018,nannipieri2003}, fungal metacommunity network analysis~\cite{toju2018}, soil organic carbon and PLFA microbial marker indicators~\cite{fanin2019,lehmann2015}, and microbial necromass dynamics~\cite{liang2020}, on the whole.
 
 \subsection{Zone Intelligence, Yield Gap, and Recommendation Rules}
-Zone analysis matches target orchards against peer observations filtered by village, mango variety, tree age, and management practice, broadly speaking; certainly, agronomic recommendations are dictated by clear measured-threshold rules categorized into the five evidence tiers, in actual application. Under these conditions, against this backdrop, reference statistics ($Q_{75}$ and top-10-percent mean) are, broadly speaking, attainable local benchmarks; this yield gap is quantified as the difference between gathered produce and this local $Q_{75}$ benchmark, broadly speaking.
+Zone analysis matches target orchards against peer observations filtered by village, mango variety, tree age, and management practice, broadly speaking; certainly, agronomic recommendations are dictated by clear measured-threshold rules categorized into the five evidence tiers\cite{coble1990}, in actual application. Under these conditions, against this backdrop, reference statistics ($Q_{75}$ and top-10-percent mean) are, broadly speaking, attainable local benchmarks; this yield gap is quantified as the difference between gathered produce and this local $Q_{75}$ benchmark, broadly speaking.
 
 \subsection{Software Implementation}
 The software stack is built in Python 3.10+ applying scikit-learn~\cite{pedregosa2011}, XGBoost, SHAP~\cite{lundberg2017}, LIME~\cite{ribeiro2016}, pandas, and numpy, broadly speaking; Any FastAPI backend exposes REST endpoints (covering \path{/forecast}, \path{/zone-analysis}, \path{/explain}, and \path{/report}), and the interactive Streamlit dashboard visualizes, in real-world scenarios.
@@ -342,7 +343,7 @@ One broad, zone-aware, and explainable decision support framework for mango soil
 \begin{thebibliography}{45}
 
 \bibitem{lundberg2017}
-Lundberg, S.M., Lee, S.I.: A unified approach to interpreting model predictions. In: Advances in Neural Information Processing Systems, vol. 30, pp. 4765--4774 (2017). \url{https://proceedings.neurips.cc/paper/2017}
+Lundberg, S.M., Lee, S.I.: A unified approach to interpreting model predictions. In: Advances in Neural Information Processing Systems, vol. 30, pp. 4765--4774 (2017). \url{https://arxiv.org/abs/1705.07874}
 
 \bibitem{ribeiro2016}
 Ribeiro, M.T., Singh, S., Guestrin, C.: ``Why should I trust you?'': Explaining the predictions of any classifier. In: Proceedings of the 22nd ACM SIGKDD, pp. 1135--1144 (2016). \url{https://doi.org/10.1145/2939672.2939778}
@@ -363,7 +364,7 @@ Bahram, M. et al.: Structure and function of the global topsoil microbiome. Natu
 Fierer, N.: Embracing the unknown: disentangling the complexities of the soil microbiome. Nat. Rev. Microbiol. \textbf{15}, 579--590 (2017). \url{https://doi.org/10.1038/nrmicro.2017.87}
 
 \bibitem{bunemann2018}
-Bünemann, E.K. et al.: Soil quality -- A critical review. Soil Biol. Biochem. \textbf{121}, 16--23 (2018). \url{https://doi.org/10.1016/j.soilbio.2018.01.030}
+Bünemann, E.K. et al.: Soil quality -- A critical review. Soil Biol. Biochem. \textbf{120}, 105--125 (2018). \url{https://doi.org/10.1016/j.soilbio.2018.01.030}
 
 \bibitem{toju2018}
 Toju, H., Tanabe, A.S., Sato, H.: Network hubs in root-associated fungal metacommunities. Microbiome \textbf{6}, 109 (2018). \url{https://doi.org/10.1186/s40168-018-0497-1}
@@ -381,7 +382,7 @@ Berendsen, R.L., Pieterse, C.M., Bakker, P.A.: The rhizosphere microbiome and pl
 Mendes, R. et al.: Deciphering the rhizosphere microbiome for disease-suppressive bacteria. Science \textbf{332}, 1097--1100 (2011). \url{https://doi.org/10.1126/science.1203980}
 
 \bibitem{bouskill2013}
-Bouskill, N.J. et al.: Belowground response to drought in a tropical forest soil. ISME J. \textbf{7}, 1803--1813 (2013). \url{https://doi.org/10.1038/ismej.2013.74}
+Bouskill, N.J. et al.: Pre-exposure to drought increases the resistance of tropical forest soil bacterial communities to extended drought. ISME J. \textbf{7}(2), 384--394 (2013). \url{https://doi.org/10.1038/ismej.2012.113}
 
 \bibitem{roberts2017}
 Roberts, D.R. et al.: Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. Ecography \textbf{40}, 913--929 (2017). \url{https://doi.org/10.1111/ecog.02881}
@@ -401,13 +402,13 @@ Doran, J.W., Zeiss, M.R.: Soil health and sustainability: managing the biotic co
 
 
 \bibitem{kohavi1995}
-Kohavi, R.: A study of cross-validation and bootstrap for accuracy estimation and model selection. In: IJCAI, vol. 14, pp. 1137--1143 (1995).
+Kohavi, R.: A study of cross-validation and bootstrap for accuracy estimation and model selection. In: IJCAI, vol. 14, pp. 1137--1143 (1995). \url{https://www.ijcai.org/Proceedings/95-2/Papers/016.pdf}
 
 \bibitem{singh2020}
-Singh, B.K., Trivedi, P., Egidi, E., Macdonald, C.A., Delgado-Baquerizo, M.: Crop microbiome and sustainable agriculture. Nat. Rev. Microbiol. \textbf{18}, 601--612 (2020). \url{https://doi.org/10.1038/s41579-020-00446-y}
+Singh, B.K., Trivedi, P., Egidi, E., Macdonald, C.A., Delgado-Baquerizo, M.: Crop microbiome and sustainable agriculture. Nat. Rev. Microbiol. \textbf{18}, 601--602 (2020). \url{https://doi.org/10.1038/s41579-020-00446-y}
 
 \bibitem{vanderheijden2008}
-Van der Heijden, M.G.A., Bardgett, R.D., van Straalen, N.M.: The unseen majority: soil microbes as drivers of plant diversity and productivity in terrestrial ecosystems. Ecol. Lett. \textbf{11}(3), 296--310 (2008). \url{https://doi.org/10.1111/j.1461-0248.2008.01209.x}
+Van der Heijden, M.G.A., Bardgett, R.D., van Straalen, N.M.: The unseen majority: soil microbes as drivers of plant diversity and productivity in terrestrial ecosystems. Ecol. Lett. \textbf{11}(3), 296--310 (2008). \url{https://doi.org/10.1111/j.1461-0248.2007.01139.x}
 
 \bibitem{chen2016}
 Chen, T., Guestrin, C.: XGBoost: A scalable tree boosting system. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 785--794 (2016). \url{https://doi.org/10.1145/2939672.2939785}
@@ -452,7 +453,7 @@ Gebbers, R., Adamchuk, V.I.: Precision agriculture and food security. Science \t
 Wolfert, S., Ge, L., Verdouw, C., Bogaardt, M.J.: Big data in smart farming -- A review. Agric. Syst. \textbf{153}, 69--80 (2017). \url{https://doi.org/10.1016/j.agsy.2017.01.023}
 
 \bibitem{coble1990}
-Coble, H.D., Mortensen, D.A.: The threshold concept and its application to weed science. Weed Technol. \textbf{6}(1), 191--195 (1992). \url{https://doi.org/10.1017/S0890037X00035400}
+Coble, H.D., Mortensen, D.A.: The threshold concept and its application to weed science. Weed Technol. \textbf{6}(1), 191--195 (1992). \url{https://doi.org/10.1017/s0890037x00034552}
 
 \bibitem{molnar2019}
 Molnar, C.: Interpretable Machine Learning: A Guide for Making Black Box Models Explainable. Leanpub (2019). \url{https://christophm.github.io/interpretable-ml-book/}
@@ -464,13 +465,13 @@ Rudin, C.: Stop explaining black box machine learning models for high stakes dec
 Doshi-Velez, F., Kim, B.: Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608 (2017). \url{https://arxiv.org/abs/1702.08608}
 
 \bibitem{mukherjee1953}
-Mukherjee, S.K.: The mango -- its botany, cultivation, uses and future improvement, especially as observed in India. Econ. Bot. \textbf{7}(2), 130--162 (1953). \url{https://doi.org/10.1007/BF02984948}
+Mukherjee, S.K.: The mango -- its botany, cultivation, uses and future improvement, especially as observed in India. Econ. Bot. \textbf{7}(2), 130--162 (1953). \url{https://doi.org/10.1007/bf02863059}
 
 \bibitem{litz2009}
 Litz, R.E. (ed.): The Mango: Botany, Production and Uses, 2nd edn. CABI, Wallingford (2009). \url{https://doi.org/10.1079/9781845934897.0000}
 
 \bibitem{kulkarni2004}
-Kulkarni, V.J.: Mango production in India. Acta Hortic. \textbf{645}, 115--122 (2004). \url{https://doi.org/10.17660/ActaHortic.2004.645.12}
+Kulkarni, V.J.: The tri-factor hypothesis of flowering in mango. Acta Hortic. \textbf{645}, 61--70 (2004). \url{https://doi.org/10.17660/ActaHortic.2004.645.3}
 
 \bibitem{nannipieri2003}
 Nannipieri, P. et al.: Microbial diversity and soil functions. Eur. J. Soil Sci. \textbf{54}, 655--670 (2003). \url{https://doi.org/10.1046/j.1351-0754.2003.0556.x}
